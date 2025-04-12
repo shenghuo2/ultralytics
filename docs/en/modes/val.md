@@ -1,16 +1,16 @@
 ---
 comments: true
-description: Learn how to validate your YOLO11 model with precise metrics, easy-to-use tools, and custom settings for optimal performance.
-keywords: Ultralytics, YOLO11, model validation, machine learning, object detection, mAP metrics, Python API, CLI
+description: 学习如何使用精确的指标、易用的工具和自定义设置来验证您的YOLO11模型,以获得最佳性能。
+keywords: Ultralytics, YOLO11, 模型验证, 机器学习, 目标检测, mAP指标, Python API, CLI
 ---
 
-# Model Validation with Ultralytics YOLO
+# 使用Ultralytics YOLO进行模型验证
 
-<img width="1024" src="https://github.com/ultralytics/docs/releases/download/0/ultralytics-yolov8-ecosystem-integrations.avif" alt="Ultralytics YOLO ecosystem and integrations">
+<img width="1024" src="https://github.com/ultralytics/docs/releases/download/0/ultralytics-yolov8-ecosystem-integrations.avif" alt="Ultralytics YOLO生态系统和集成">
 
-## Introduction
+## 简介
 
-Validation is a critical step in the [machine learning](https://www.ultralytics.com/glossary/machine-learning-ml) pipeline, allowing you to assess the quality of your trained models. Val mode in Ultralytics YOLO11 provides a robust suite of tools and metrics for evaluating the performance of your [object detection](https://www.ultralytics.com/glossary/object-detection) models. This guide serves as a complete resource for understanding how to effectively use the Val mode to ensure that your models are both accurate and reliable.
+验证是机器学习流程中的关键步骤,它允许您评估训练模型的质量。Ultralytics YOLO11中的Val模式提供了一套强大的工具和指标,用于评估目标检测模型的性能。本指南作为一个完整的资源,帮助您了解如何有效地使用Val模式,以确保您的模型既准确又可靠。
 
 <p align="center">
   <br>
@@ -20,34 +20,34 @@ Validation is a critical step in the [machine learning](https://www.ultralytics.
     allowfullscreen>
   </iframe>
   <br>
-  <strong>Watch:</strong> Ultralytics Modes Tutorial: Validation
+  <strong>观看:</strong> Ultralytics模式教程:验证
 </p>
 
-## Why Validate with Ultralytics YOLO?
+## 为什么使用Ultralytics YOLO进行验证?
 
-Here's why using YOLO11's Val mode is advantageous:
+以下是使用YOLO11的Val模式的优势:
 
-- **Precision:** Get accurate metrics like mAP50, mAP75, and mAP50-95 to comprehensively evaluate your model.
-- **Convenience:** Utilize built-in features that remember training settings, simplifying the validation process.
-- **Flexibility:** Validate your model with the same or different datasets and image sizes.
-- **[Hyperparameter Tuning](https://www.ultralytics.com/glossary/hyperparameter-tuning):** Use validation metrics to fine-tune your model for better performance.
+- **精确度:** 获得准确的指标,如mAP50、mAP75和mAP50-95,以全面评估您的模型。
+- **便利性:** 利用内置功能记住训练设置,简化验证过程。
+- **灵活性:** 使用相同或不同的数据集和图像大小验证您的模型。
+- **超参数调整:** 使用验证指标微调您的模型以获得更好的性能。
 
-### Key Features of Val Mode
+### Val模式的主要特点
 
-These are the notable functionalities offered by YOLO11's Val mode:
+以下是YOLO11的Val模式提供的显著功能:
 
-- **Automated Settings:** Models remember their training configurations for straightforward validation.
-- **Multi-Metric Support:** Evaluate your model based on a range of accuracy metrics.
-- **CLI and Python API:** Choose from command-line interface or Python API based on your preference for validation.
-- **Data Compatibility:** Works seamlessly with datasets used during the training phase as well as custom datasets.
+- **自动设置:** 模型记住其训练配置,便于直接验证。
+- **多指标支持:** 基于一系列准确性指标评估您的模型。
+- **CLI和Python API:** 根据您的偏好选择命令行界面或Python API进行验证。
+- **数据兼容性:** 与训练阶段使用的数据集以及自定义数据集无缝配合。
 
 !!! tip
 
-    * YOLO11 models automatically remember their training settings, so you can validate a model at the same image size and on the original dataset easily with just `yolo val model=yolo11n.pt` or `model('yolo11n.pt').val()`
+    * YOLO11模型会自动记住其训练设置,因此您可以轻松地以相同的图像大小和原始数据集验证模型,只需使用`yolo val model=yolo11n.pt`或`model('yolo11n.pt').val()`
 
-## Usage Examples
+## 使用示例
 
-Validate trained YOLO11n model [accuracy](https://www.ultralytics.com/glossary/accuracy) on the COCO8 dataset. No arguments are needed as the `model` retains its training `data` and arguments as model attributes. See Arguments section below for a full list of validation arguments.
+在COCO8数据集上验证训练好的YOLO11n模型的准确性。不需要任何参数,因为`model`将其训练`data`和参数保留为模型属性。有关验证参数的完整列表,请参见下面的参数部分。
 
 !!! example
 
@@ -56,36 +56,36 @@ Validate trained YOLO11n model [accuracy](https://www.ultralytics.com/glossary/a
         ```python
         from ultralytics import YOLO
 
-        # Load a model
-        model = YOLO("yolo11n.pt")  # load an official model
-        model = YOLO("path/to/best.pt")  # load a custom model
+        # 加载模型
+        model = YOLO("yolo11n.pt")  # 加载官方模型
+        model = YOLO("path/to/best.pt")  # 加载自定义模型
 
-        # Validate the model
-        metrics = model.val()  # no arguments needed, dataset and settings remembered
+        # 验证模型
+        metrics = model.val()  # 不需要参数,数据集和设置已记住
         metrics.box.map  # map50-95
         metrics.box.map50  # map50
         metrics.box.map75  # map75
-        metrics.box.maps  # a list contains map50-95 of each category
+        metrics.box.maps  # 包含每个类别map50-95的列表
         ```
 
     === "CLI"
 
         ```bash
-        yolo detect val model=yolo11n.pt      # val official model
-        yolo detect val model=path/to/best.pt # val custom model
+        yolo detect val model=yolo11n.pt      # 验证官方模型
+        yolo detect val model=path/to/best.pt # 验证自定义模型
         ```
 
-## Arguments for YOLO Model Validation
+## YOLO模型验证的参数
 
-When validating YOLO models, several arguments can be fine-tuned to optimize the evaluation process. These arguments control aspects such as input image size, batch processing, and performance thresholds. Below is a detailed breakdown of each argument to help you customize your validation settings effectively.
+在验证YOLO模型时,可以微调几个参数以优化评估过程。这些参数控制输入图像大小、批处理和性能阈值等方面。以下是每个参数的详细分解,以帮助您有效地自定义验证设置。
 
 {% include "macros/validation-args.md" %}
 
-Each of these settings plays a vital role in the validation process, allowing for a customizable and efficient evaluation of YOLO models. Adjusting these parameters according to your specific needs and resources can help achieve the best balance between accuracy and performance.
+这些设置中的每一个都在验证过程中发挥着重要作用,允许对YOLO模型进行可定制和高效的评估。根据您的具体需求和资源调整这些参数可以帮助在准确性和性能之间取得最佳平衡。
 
-### Example Validation with Arguments
+### 带参数的验证示例
 
-The below examples showcase YOLO model validation with custom arguments in Python and CLI.
+以下示例展示了在Python和CLI中使用自定义参数进行YOLO模型验证。
 
 !!! example
 
@@ -94,10 +94,10 @@ The below examples showcase YOLO model validation with custom arguments in Pytho
         ```python
         from ultralytics import YOLO
 
-        # Load a model
+        # 加载模型
         model = YOLO("yolo11n.pt")
 
-        # Customize validation settings
+        # 自定义验证设置
         validation_results = model.val(data="coco8.yaml", imgsz=640, batch=16, conf=0.25, iou=0.6, device="0")
         ```
 
@@ -107,107 +107,107 @@ The below examples showcase YOLO model validation with custom arguments in Pytho
         yolo val model=yolo11n.pt data=coco8.yaml imgsz=640 batch=16 conf=0.25 iou=0.6 device=0
         ```
 
-## FAQ
+## 常见问题
 
-### How do I validate my YOLO11 model with Ultralytics?
+### 如何使用Ultralytics验证我的YOLO11模型?
 
-To validate your YOLO11 model, you can use the Val mode provided by Ultralytics. For example, using the Python API, you can load a model and run validation with:
+要验证您的YOLO11模型,您可以使用Ultralytics提供的Val模式。例如,使用Python API,您可以加载模型并运行验证:
 
 ```python
 from ultralytics import YOLO
 
-# Load a model
+# 加载模型
 model = YOLO("yolo11n.pt")
 
-# Validate the model
+# 验证模型
 metrics = model.val()
 print(metrics.box.map)  # map50-95
 ```
 
-Alternatively, you can use the command-line interface (CLI):
+或者,您可以使用命令行界面(CLI):
 
 ```bash
 yolo val model=yolo11n.pt
 ```
 
-For further customization, you can adjust various arguments like `imgsz`, `batch`, and `conf` in both Python and CLI modes. Check the [Arguments for YOLO Model Validation](#arguments-for-yolo-model-validation) section for the full list of parameters.
+要进一步自定义,您可以在Python和CLI模式下调整各种参数,如`imgsz`、`batch`和`conf`。查看[YOLO模型验证的参数](#yolo模型验证的参数)部分以获取完整的参数列表。
 
-### What metrics can I get from YOLO11 model validation?
+### 从YOLO11模型验证中可以获得哪些指标?
 
-YOLO11 model validation provides several key metrics to assess model performance. These include:
+YOLO11模型验证提供了几个关键指标来评估模型性能。这些包括:
 
-- mAP50 (mean Average Precision at IoU threshold 0.5)
-- mAP75 (mean Average Precision at IoU threshold 0.75)
-- mAP50-95 (mean Average Precision across multiple IoU thresholds from 0.5 to 0.95)
+- mAP50(IoU阈值为0.5的平均精度均值)
+- mAP75(IoU阈值为0.75的平均精度均值)
+- mAP50-95(多个IoU阈值从0.5到0.95的平均精度均值)
 
-Using the Python API, you can access these metrics as follows:
+使用Python API,您可以按如下方式访问这些指标:
 
 ```python
-metrics = model.val()  # assumes `model` has been loaded
+metrics = model.val()  # 假设已加载`model`
 print(metrics.box.map)  # mAP50-95
 print(metrics.box.map50)  # mAP50
 print(metrics.box.map75)  # mAP75
-print(metrics.box.maps)  # list of mAP50-95 for each category
+print(metrics.box.maps)  # 每个类别的mAP50-95列表
 ```
 
-For a complete performance evaluation, it's crucial to review all these metrics. For more details, refer to the [Key Features of Val Mode](#key-features-of-val-mode).
+为了全面评估性能,审查所有这些指标至关重要。有关更多详细信息,请参阅[Val模式的主要特点](#val模式的主要特点)。
 
-### What are the advantages of using Ultralytics YOLO for validation?
+### 使用Ultralytics YOLO进行验证有哪些优势?
 
-Using Ultralytics YOLO for validation provides several advantages:
+使用Ultralytics YOLO进行验证提供了几个优势:
 
-- **[Precision](https://www.ultralytics.com/glossary/precision):** YOLO11 offers accurate performance metrics including mAP50, mAP75, and mAP50-95.
-- **Convenience:** The models remember their training settings, making validation straightforward.
-- **Flexibility:** You can validate against the same or different datasets and image sizes.
-- **Hyperparameter Tuning:** Validation metrics help in fine-tuning models for better performance.
+- **精确度:** YOLO11提供准确的性能指标,包括mAP50、mAP75和mAP50-95。
+- **便利性:** 模型记住其训练设置,使验证变得简单直接。
+- **灵活性:** 您可以针对相同或不同的数据集和图像大小进行验证。
+- **超参数调整:** 验证指标有助于微调模型以获得更好的性能。
 
-These benefits ensure that your models are evaluated thoroughly and can be optimized for superior results. Learn more about these advantages in the [Why Validate with Ultralytics YOLO](#why-validate-with-ultralytics-yolo) section.
+这些优势确保您的模型得到彻底评估,并可以优化以获得更好的结果。在[为什么使用Ultralytics YOLO进行验证](#为什么使用ultralytics-yolo进行验证)部分了解更多关于这些优势的信息。
 
-### Can I validate my YOLO11 model using a custom dataset?
+### 我可以使用自定义数据集验证我的YOLO11模型吗?
 
-Yes, you can validate your YOLO11 model using a [custom dataset](https://docs.ultralytics.com/datasets/). Specify the `data` argument with the path to your dataset configuration file. This file should include paths to the [validation data](https://www.ultralytics.com/glossary/validation-data), class names, and other relevant details.
+是的,您可以使用自定义数据集验证您的YOLO11模型。指定`data`参数为您的数据集配置文件的路径。该文件应包括验证数据的路径、类名和其他相关详细信息。
 
-Example in Python:
+Python示例:
 
 ```python
 from ultralytics import YOLO
 
-# Load a model
+# 加载模型
 model = YOLO("yolo11n.pt")
 
-# Validate with a custom dataset
+# 使用自定义数据集验证
 metrics = model.val(data="path/to/your/custom_dataset.yaml")
 print(metrics.box.map)  # map50-95
 ```
 
-Example using CLI:
+使用CLI的示例:
 
 ```bash
 yolo val model=yolo11n.pt data=path/to/your/custom_dataset.yaml
 ```
 
-For more customizable options during validation, see the [Example Validation with Arguments](#example-validation-with-arguments) section.
+有关验证期间更多可自定义选项,请参见[带参数的验证示例](#带参数的验证示例)部分。
 
-### How do I save validation results to a JSON file in YOLO11?
+### 如何在YOLO11中将验证结果保存到JSON文件?
 
-To save the validation results to a JSON file, you can set the `save_json` argument to `True` when running validation. This can be done in both the Python API and CLI.
+要将验证结果保存到JSON文件,您可以在运行验证时将`save_json`参数设置为`True`。这可以在Python API和CLI中完成。
 
-Example in Python:
+Python示例:
 
 ```python
 from ultralytics import YOLO
 
-# Load a model
+# 加载模型
 model = YOLO("yolo11n.pt")
 
-# Save validation results to JSON
+# 将验证结果保存到JSON
 metrics = model.val(save_json=True)
 ```
 
-Example using CLI:
+使用CLI的示例:
 
 ```bash
 yolo val model=yolo11n.pt save_json=True
 ```
 
-This functionality is particularly useful for further analysis or integration with other tools. Check the [Arguments for YOLO Model Validation](#arguments-for-yolo-model-validation) for more details.
+这个功能对于进一步分析或与其他工具集成特别有用。查看[YOLO模型验证的参数](#yolo模型验证的参数)以获取更多详细信息。

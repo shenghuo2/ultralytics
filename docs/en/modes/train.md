@@ -1,16 +1,16 @@
 ---
 comments: true
-description: Learn how to efficiently train object detection models using YOLO11 with comprehensive instructions on settings, augmentation, and hardware utilization.
-keywords: Ultralytics, YOLO11, model training, deep learning, object detection, GPU training, dataset augmentation, hyperparameter tuning, model performance, apple silicon training
+description: 学习如何使用YOLO11高效训练目标检测模型,包括设置、数据增强和硬件利用的全面说明。
+keywords: Ultralytics, YOLO11, 模型训练, 深度学习, 目标检测, GPU训练, 数据集增强, 超参数调优, 模型性能, Apple Silicon训练
 ---
 
-# Model Training with Ultralytics YOLO
+# 使用Ultralytics YOLO进行模型训练
 
-<img width="1024" src="https://github.com/ultralytics/docs/releases/download/0/ultralytics-yolov8-ecosystem-integrations.avif" alt="Ultralytics YOLO ecosystem and integrations">
+<img width="1024" src="https://github.com/ultralytics/docs/releases/download/0/ultralytics-yolov8-ecosystem-integrations.avif" alt="Ultralytics YOLO生态系统和集成">
 
-## Introduction
+## 简介
 
-Training a [deep learning](https://www.ultralytics.com/glossary/deep-learning-dl) model involves feeding it data and adjusting its parameters so that it can make accurate predictions. Train mode in Ultralytics YOLO11 is engineered for effective and efficient training of object detection models, fully utilizing modern hardware capabilities. This guide aims to cover all the details you need to get started with training your own models using YOLO11's robust set of features.
+训练深度学习模型涉及向其输入数据并调整其参数,以便它能够做出准确的预测。Ultralytics YOLO11的训练模式旨在有效且高效地训练目标检测模型,充分利用现代硬件功能。本指南旨在涵盖您开始使用YOLO11强大功能集训练自己的模型所需的所有细节。
 
 <p align="center">
   <br>
@@ -20,198 +20,198 @@ Training a [deep learning](https://www.ultralytics.com/glossary/deep-learning-dl
     allowfullscreen>
   </iframe>
   <br>
-  <strong>Watch:</strong> How to Train a YOLO model on Your Custom Dataset in Google Colab.
+  <strong>观看:</strong> 如何在Google Colab中对自定义数据集训练YOLO模型。
 </p>
 
-## Why Choose Ultralytics YOLO for Training?
+## 为什么选择Ultralytics YOLO进行训练?
 
-Here are some compelling reasons to opt for YOLO11's Train mode:
+以下是选择YOLO11训练模式的一些令人信服的理由:
 
-- **Efficiency:** Make the most out of your hardware, whether you're on a single-GPU setup or scaling across multiple GPUs.
-- **Versatility:** Train on custom datasets in addition to readily available ones like COCO, VOC, and ImageNet.
-- **User-Friendly:** Simple yet powerful CLI and Python interfaces for a straightforward training experience.
-- **Hyperparameter Flexibility:** A broad range of customizable hyperparameters to fine-tune model performance.
+- **效率:** 无论您是使用单GPU设置还是跨多个GPU扩展,都能充分利用您的硬件。
+- **多功能性:** 除了现成的数据集(如COCO、VOC和ImageNet)外,还可以在自定义数据集上进行训练。
+- **用户友好:** 简单而强大的CLI和Python接口,提供直观的训练体验。
+- **超参数灵活性:** 广泛的可自定义超参数,用于微调模型性能。
 
-### Key Features of Train Mode
+### 训练模式的主要特点
 
-The following are some notable features of YOLO11's Train mode:
+以下是YOLO11训练模式的一些显著特点:
 
-- **Automatic Dataset Download:** Standard datasets like COCO, VOC, and ImageNet are downloaded automatically on first use.
-- **Multi-GPU Support:** Scale your training efforts seamlessly across multiple GPUs to expedite the process.
-- **Hyperparameter Configuration:** The option to modify hyperparameters through YAML configuration files or CLI arguments.
-- **Visualization and Monitoring:** Real-time tracking of training metrics and visualization of the learning process for better insights.
+- **自动数据集下载:** 首次使用时自动下载COCO、VOC和ImageNet等标准数据集。
+- **多GPU支持:** 无缝地跨多个GPU扩展您的训练工作,以加快处理速度。
+- **超参数配置:** 可以通过YAML配置文件或CLI参数修改超参数。
+- **可视化和监控:** 实时跟踪训练指标并可视化学习过程,以获得更好的洞察力。
 
 !!! tip
 
-    * YOLO11 datasets like COCO, VOC, ImageNet and many others automatically download on first use, i.e. `yolo train data=coco.yaml`
+    * YOLO11数据集如COCO、VOC、ImageNet等在首次使用时会自动下载,例如`yolo train data=coco.yaml`
 
-## Usage Examples
+## 使用示例
 
-Train YOLO11n on the COCO8 dataset for 100 [epochs](https://www.ultralytics.com/glossary/epoch) at image size 640. The training device can be specified using the `device` argument. If no argument is passed GPU `device=0` will be used if available, otherwise `device='cpu'` will be used. See Arguments section below for a full list of training arguments.
+在COCO8数据集上训练YOLO11n,训练100个epoch,图像大小为640。可以使用`device`参数指定训练设备。如果未传递参数,将使用可用的GPU `device=0`,否则将使用`device='cpu'`。有关完整的训练参数列表,请参阅下面的参数部分。
 
-!!! warning "Windows Multi-Processing Error"
+!!! warning "Windows多进程错误"
 
-    On Windows, you may receive a `RuntimeError` when launching the training as a script. Add a `if __name__ == "__main__":` block before your training code to resolve it.
+    在Windows上,当以脚本形式启动训练时,您可能会收到`RuntimeError`。在训练代码之前添加`if __name__ == "__main__":`块可以解决这个问题。
 
-!!! example "Single-GPU and CPU Training Example"
+!!! example "单GPU和CPU训练示例"
 
-    Device is determined automatically. If a GPU is available then it will be used, otherwise training will start on CPU.
+    设备会自动确定。如果有GPU可用,则会使用GPU,否则训练将在CPU上开始。
 
     === "Python"
 
         ```python
         from ultralytics import YOLO
 
-        # Load a model
-        model = YOLO("yolo11n.yaml")  # build a new model from YAML
-        model = YOLO("yolo11n.pt")  # load a pretrained model (recommended for training)
-        model = YOLO("yolo11n.yaml").load("yolo11n.pt")  # build from YAML and transfer weights
+        # 加载模型
+        model = YOLO("yolo11n.yaml")  # 从YAML构建新模型
+        model = YOLO("yolo11n.pt")  # 加载预训练模型(推荐用于训练)
+        model = YOLO("yolo11n.yaml").load("yolo11n.pt")  # 从YAML构建并传输权重
 
-        # Train the model
+        # 训练模型
         results = model.train(data="coco8.yaml", epochs=100, imgsz=640)
         ```
 
     === "CLI"
 
         ```bash
-        # Build a new model from YAML and start training from scratch
+        # 从YAML构建新模型并从头开始训练
         yolo detect train data=coco8.yaml model=yolo11n.yaml epochs=100 imgsz=640
 
-        # Start training from a pretrained *.pt model
+        # 从预训练的*.pt模型开始训练
         yolo detect train data=coco8.yaml model=yolo11n.pt epochs=100 imgsz=640
 
-        # Build a new model from YAML, transfer pretrained weights to it and start training
+        # 从YAML构建新模型,传输预训练权重并开始训练
         yolo detect train data=coco8.yaml model=yolo11n.yaml pretrained=yolo11n.pt epochs=100 imgsz=640
         ```
 
-### Multi-GPU Training
+### 多GPU训练
 
-Multi-GPU training allows for more efficient utilization of available hardware resources by distributing the training load across multiple GPUs. This feature is available through both the Python API and the command-line interface. To enable multi-GPU training, specify the GPU device IDs you wish to use.
+多GPU训练允许通过在多个GPU之间分配训练负载来更有效地利用可用的硬件资源。此功能可通过Python API和命令行界面使用。要启用多GPU训练,请指定您希望使用的GPU设备ID。
 
-!!! example "Multi-GPU Training Example"
+!!! example "多GPU训练示例"
 
-    To train with 2 GPUs, CUDA devices 0 and 1 use the following commands. Expand to additional GPUs as required.
+    要使用2个GPU(CUDA设备0和1)进行训练,请使用以下命令。根据需要扩展到更多GPU。
 
     === "Python"
 
         ```python
         from ultralytics import YOLO
 
-        # Load a model
-        model = YOLO("yolo11n.pt")  # load a pretrained model (recommended for training)
+        # 加载模型
+        model = YOLO("yolo11n.pt")  # 加载预训练模型(推荐用于训练)
 
-        # Train the model with 2 GPUs
+        # 使用2个GPU训练模型
         results = model.train(data="coco8.yaml", epochs=100, imgsz=640, device=[0, 1])
         ```
 
     === "CLI"
 
         ```bash
-        # Start training from a pretrained *.pt model using GPUs 0 and 1
+        # 从预训练的*.pt模型开始训练,使用GPU 0和1
         yolo detect train data=coco8.yaml model=yolo11n.pt epochs=100 imgsz=640 device=0,1
         ```
 
-### Apple Silicon MPS Training
+### Apple Silicon MPS训练
 
-With the support for Apple silicon chips integrated in the Ultralytics YOLO models, it's now possible to train your models on devices utilizing the powerful Metal Performance Shaders (MPS) framework. The MPS offers a high-performance way of executing computation and image processing tasks on Apple's custom silicon.
+随着对Apple silicon芯片的支持集成到Ultralytics YOLO模型中,现在可以在利用强大的Metal Performance Shaders (MPS)框架的设备上训练模型。MPS提供了一种高性能的方式来执行Apple自定义silicon上的计算和图像处理任务。
 
-To enable training on Apple silicon chips, you should specify 'mps' as your device when initiating the training process. Below is an example of how you could do this in Python and via the command line:
+要在Apple silicon芯片上启用训练,您应该在启动训练过程时将'mps'指定为设备。以下是如何在Python和命令行中执行此操作的示例:
 
-!!! example "MPS Training Example"
+!!! example "MPS训练示例"
 
     === "Python"
 
         ```python
         from ultralytics import YOLO
 
-        # Load a model
-        model = YOLO("yolo11n.pt")  # load a pretrained model (recommended for training)
+        # 加载模型
+        model = YOLO("yolo11n.pt")  # 加载预训练模型(推荐用于训练)
 
-        # Train the model with MPS
+        # 使用MPS训练模型
         results = model.train(data="coco8.yaml", epochs=100, imgsz=640, device="mps")
         ```
 
     === "CLI"
 
         ```bash
-        # Start training from a pretrained *.pt model using MPS
+        # 从预训练的*.pt模型开始使用MPS进行训练
         yolo detect train data=coco8.yaml model=yolo11n.pt epochs=100 imgsz=640 device=mps
         ```
 
-While leveraging the computational power of the Apple silicon chips, this enables more efficient processing of the training tasks. For more detailed guidance and advanced configuration options, please refer to the [PyTorch MPS documentation](https://pytorch.org/docs/stable/notes/mps.html).
+利用Apple silicon芯片的计算能力,这使得训练任务的处理更加高效。有关更详细的指导和高级配置选项,请参阅[PyTorch MPS文档](https://pytorch.org/docs/stable/notes/mps.html)。
 
-### Resuming Interrupted Trainings
+### 恢复中断的训练
 
-Resuming training from a previously saved state is a crucial feature when working with deep learning models. This can come in handy in various scenarios, like when the training process has been unexpectedly interrupted, or when you wish to continue training a model with new data or for more epochs.
+从先前保存的状态恢复训练是使用深度学习模型时的一个关键功能。这在各种情况下都很有用,比如训练过程意外中断,或者当您希望继续用新数据或更多epoch训练模型时。
 
-When training is resumed, Ultralytics YOLO loads the weights from the last saved model and also restores the optimizer state, [learning rate](https://www.ultralytics.com/glossary/learning-rate) scheduler, and the epoch number. This allows you to continue the training process seamlessly from where it was left off.
+恢复训练时,Ultralytics YOLO会加载最后保存模型的权重,并恢复优化器状态、学习率调度器和epoch数。这允许您从中断的地方无缝地继续训练过程。
 
-You can easily resume training in Ultralytics YOLO by setting the `resume` argument to `True` when calling the `train` method, and specifying the path to the `.pt` file containing the partially trained model weights.
+在Ultralytics YOLO中,您可以通过在调用`train`方法时将`resume`参数设置为`True`,并指定包含部分训练模型权重的`.pt`文件的路径来轻松恢复训练。
 
-Below is an example of how to resume an interrupted training using Python and via the command line:
+以下是如何使用Python和命令行恢复中断训练的示例:
 
-!!! example "Resume Training Example"
+!!! example "恢复训练示例"
 
     === "Python"
 
         ```python
         from ultralytics import YOLO
 
-        # Load a model
-        model = YOLO("path/to/last.pt")  # load a partially trained model
+        # 加载模型
+        model = YOLO("path/to/last.pt")  # 加载部分训练的模型
 
-        # Resume training
+        # 恢复训练
         results = model.train(resume=True)
         ```
 
     === "CLI"
 
         ```bash
-        # Resume an interrupted training
+        # 恢复中断的训练
         yolo train resume model=path/to/last.pt
         ```
 
-By setting `resume=True`, the `train` function will continue training from where it left off, using the state stored in the 'path/to/last.pt' file. If the `resume` argument is omitted or set to `False`, the `train` function will start a new training session.
+通过设置`resume=True`,`train`函数将使用存储在'path/to/last.pt'文件中的状态继续训练。如果省略`resume`参数或将其设置为`False`,`train`函数将开始新的训练会话。
 
-Remember that checkpoints are saved at the end of every epoch by default, or at fixed intervals using the `save_period` argument, so you must complete at least 1 epoch to resume a training run.
+请记住,默认情况下,检查点会在每个epoch结束时保存,或使用`save_period`参数以固定间隔保存,因此您必须至少完成1个epoch才能恢复训练运行。
 
-## Train Settings
+## 训练设置
 
-The training settings for YOLO models encompass various hyperparameters and configurations used during the training process. These settings influence the model's performance, speed, and [accuracy](https://www.ultralytics.com/glossary/accuracy). Key training settings include batch size, learning rate, momentum, and weight decay. Additionally, the choice of optimizer, [loss function](https://www.ultralytics.com/glossary/loss-function), and training dataset composition can impact the training process. Careful tuning and experimentation with these settings are crucial for optimizing performance.
+YOLO模型的训练设置包括训练过程中使用的各种超参数和配置。这些设置影响模型的性能、速度和准确性。关键的训练设置包括批量大小、学习率、动量和权重衰减。此外,优化器的选择、损失函数和训练数据集的组成也会影响训练过程。仔细调整和实验这些设置对于优化性能至关重要。
 
 {% include "macros/train-args.md" %}
 
-!!! info "Note on Batch-size Settings"
+!!! info "批量大小设置说明"
 
-    The `batch` argument can be configured in three ways:
+    `batch`参数可以通过三种方式配置:
 
-    - **Fixed [Batch Size](https://www.ultralytics.com/glossary/batch-size)**: Set an integer value (e.g., `batch=16`), specifying the number of images per batch directly.
-    - **Auto Mode (60% GPU Memory)**: Use `batch=-1` to automatically adjust batch size for approximately 60% CUDA memory utilization.
-    - **Auto Mode with Utilization Fraction**: Set a fraction value (e.g., `batch=0.70`) to adjust batch size based on the specified fraction of GPU memory usage.
+    - **固定批量大小**: 设置一个整数值(例如,`batch=16`),直接指定每批图像的数量。
+    - **自动模式(60% GPU内存)**: 使用`batch=-1`自动调整批量大小,以利用约60%的CUDA内存。
+    - **带利用率分数的自动模式**: 设置一个分数值(例如,`batch=0.70`)根据指定的GPU内存使用率分数调整批量大小。
 
-## Augmentation Settings and Hyperparameters
+## 增强设置和超参数
 
-Augmentation techniques are essential for improving the robustness and performance of YOLO models by introducing variability into the [training data](https://www.ultralytics.com/glossary/training-data), helping the model generalize better to unseen data. The following table outlines the purpose and effect of each augmentation argument:
+增强技术对于通过在训练数据中引入可变性来提高YOLO模型的鲁棒性和性能至关重要,有助于模型更好地泛化到未见过的数据。下表概述了每个增强参数的目的和效果:
 
 {% include "macros/augmentation-args.md" %}
 
-These settings can be adjusted to meet the specific requirements of the dataset and task at hand. Experimenting with different values can help find the optimal augmentation strategy that leads to the best model performance.
+这些设置可以根据数据集和任务的具体要求进行调整。尝试不同的值可以帮助找到导致最佳模型性能的最佳增强策略。
 
 !!! info
 
-    For more information about training augmentation operations, see the [reference section](../reference/data/augment.md).
+    有关训练增强操作的更多信息,请参阅[参考部分](../reference/data/augment.md)。
 
-## Logging
+## 日志记录
 
-In training a YOLO11 model, you might find it valuable to keep track of the model's performance over time. This is where logging comes into play. Ultralytics YOLO provides support for three types of loggers - [Comet](../integrations/comet.md), [ClearML](../integrations/clearml.md), and [TensorBoard](../integrations/tensorboard.md).
+在训练YOLO11模型时,您可能会发现跟踪模型随时间的性能很有价值。这就是日志记录发挥作用的地方。Ultralytics YOLO提供对三种类型的记录器的支持 - [Comet](../integrations/comet.md)、[ClearML](../integrations/clearml.md)和[TensorBoard](../integrations/tensorboard.md)。
 
-To use a logger, select it from the dropdown menu in the code snippet above and run it. The chosen logger will be installed and initialized.
+要使用记录器,请从上面的代码片段中的下拉菜单中选择一个并运行它。所选的记录器将被安装和初始化。
 
 ### Comet
 
-[Comet](../integrations/comet.md) is a platform that allows data scientists and developers to track, compare, explain and optimize experiments and models. It provides functionalities such as real-time metrics, code diffs, and hyperparameters tracking.
+[Comet](../integrations/comet.md)是一个平台,允许数据科学家和开发人员跟踪、比较、解释和优化实验和模型。它提供了实时指标、代码差异和超参数跟踪等功能。
 
-To use Comet:
+要使用Comet:
 
 !!! example
 
@@ -224,13 +224,13 @@ To use Comet:
         comet_ml.init()
         ```
 
-Remember to sign in to your Comet account on their website and get your API key. You will need to add this to your environment variables or your script to log your experiments.
+记得在他们的网站上登录您的Comet帐户并获取您的API密钥。您需要将其添加到环境变量或脚本中以记录您的实验。
 
 ### ClearML
 
-[ClearML](https://clear.ml/) is an open-source platform that automates tracking of experiments and helps with efficient sharing of resources. It is designed to help teams manage, execute, and reproduce their ML work more efficiently.
+[ClearML](https://clear.ml/)是一个开源平台,可自动跟踪实验并帮助高效共享资源。它旨在帮助团队更有效地管理、执行和重现他们的ML工作。
 
-To use ClearML:
+要使用ClearML:
 
 !!! example
 
@@ -243,13 +243,13 @@ To use ClearML:
         clearml.browser_login()
         ```
 
-After running this script, you will need to sign in to your ClearML account on the browser and authenticate your session.
+运行此脚本后,您需要在浏览器上登录您的ClearML帐户并验证您的会话。
 
 ### TensorBoard
 
-[TensorBoard](https://www.tensorflow.org/tensorboard) is a visualization toolkit for [TensorFlow](https://www.ultralytics.com/glossary/tensorflow). It allows you to visualize your TensorFlow graph, plot quantitative metrics about the execution of your graph, and show additional data like images that pass through it.
+[TensorBoard](https://www.tensorflow.org/tensorboard)是[TensorFlow](https://www.ultralytics.com/glossary/tensorflow)的可视化工具包。它允许你可视化你的TensorFlow图，绘制关于图执行的定量指标，并显示通过它的其他数据，如图像。
 
-To use TensorBoard in [Google Colab](https://colab.research.google.com/github/ultralytics/ultralytics/blob/main/examples/tutorial.ipynb):
+在[Google Colab](https://colab.research.google.com/github/ultralytics/ultralytics/blob/main/examples/tutorial.ipynb)中使用TensorBoard：
 
 !!! example
 
@@ -257,40 +257,40 @@ To use TensorBoard in [Google Colab](https://colab.research.google.com/github/ul
 
         ```bash
         load_ext tensorboard
-        tensorboard --logdir ultralytics/runs # replace with 'runs' directory
+        tensorboard --logdir ultralytics/runs # 替换为'runs'目录
         ```
 
-To use TensorBoard locally run the below command and view results at `http://localhost:6006/`.
+要在本地使用TensorBoard，运行以下命令并在`http://localhost:6006/`查看结果。
 
 !!! example
 
     === "CLI"
 
         ```bash
-        tensorboard --logdir ultralytics/runs # replace with 'runs' directory
+        tensorboard --logdir ultralytics/runs # 替换为'runs'目录
         ```
 
-This will load TensorBoard and direct it to the directory where your training logs are saved.
+这将加载TensorBoard并将其指向保存训练日志的目录。
 
-After setting up your logger, you can then proceed with your model training. All training metrics will be automatically logged in your chosen platform, and you can access these logs to monitor your model's performance over time, compare different models, and identify areas for improvement.
+设置好日志记录器后，你就可以继续进行模型训练。所有训练指标将自动记录在你选择的平台上，你可以访问这些日志来监控模型的性能随时间的变化，比较不同的模型，并识别需要改进的领域。
 
-## FAQ
+## 常见问题
 
-### How do I train an [object detection](https://www.ultralytics.com/glossary/object-detection) model using Ultralytics YOLO11?
+### 如何使用Ultralytics YOLO11训练[目标检测](https://www.ultralytics.com/glossary/object-detection)模型？
 
-To train an object detection model using Ultralytics YOLO11, you can either use the Python API or the CLI. Below is an example for both:
+要使用Ultralytics YOLO11训练目标检测模型，你可以使用Python API或CLI。以下是两种方式的示例：
 
-!!! example "Single-GPU and CPU Training Example"
+!!! example "单GPU和CPU训练示例"
 
     === "Python"
 
         ```python
         from ultralytics import YOLO
 
-        # Load a model
-        model = YOLO("yolo11n.pt")  # load a pretrained model (recommended for training)
+        # 加载模型
+        model = YOLO("yolo11n.pt")  # 加载预训练模型（推荐用于训练）
 
-        # Train the model
+        # 训练模型
         results = model.train(data="coco8.yaml", epochs=100, imgsz=640)
         ```
 
@@ -300,34 +300,34 @@ To train an object detection model using Ultralytics YOLO11, you can either use 
         yolo detect train data=coco8.yaml model=yolo11n.pt epochs=100 imgsz=640
         ```
 
-For more details, refer to the [Train Settings](#train-settings) section.
+更多详情，请参阅[训练设置](#train-settings)部分。
 
-### What are the key features of Ultralytics YOLO11's Train mode?
+### Ultralytics YOLO11的训练模式有哪些主要特点？
 
-The key features of Ultralytics YOLO11's Train mode include:
+Ultralytics YOLO11的训练模式主要特点包括：
 
-- **Automatic Dataset Download:** Automatically downloads standard datasets like COCO, VOC, and ImageNet.
-- **Multi-GPU Support:** Scale training across multiple GPUs for faster processing.
-- **Hyperparameter Configuration:** Customize hyperparameters through YAML files or CLI arguments.
-- **Visualization and Monitoring:** Real-time tracking of training metrics for better insights.
+- **自动数据集下载：** 自动下载标准数据集，如COCO、VOC和ImageNet。
+- **多GPU支持：** 跨多个GPU扩展训练，以加快处理速度。
+- **超参数配置：** 通过YAML文件或CLI参数自定义超参数。
+- **可视化和监控：** 实时跟踪训练指标，以获得更好的洞察。
 
-These features make training efficient and customizable to your needs. For more details, see the [Key Features of Train Mode](#key-features-of-train-mode) section.
+这些特点使训练变得高效且可根据你的需求进行定制。更多详情，请参阅[训练模式的主要特点](#key-features-of-train-mode)部分。
 
-### How do I resume training from an interrupted session in Ultralytics YOLO11?
+### 如何在Ultralytics YOLO11中从中断的会话恢复训练？
 
-To resume training from an interrupted session, set the `resume` argument to `True` and specify the path to the last saved checkpoint.
+要从中断的会话恢复训练，将`resume`参数设置为`True`，并指定最后保存的检查点的路径。
 
-!!! example "Resume Training Example"
+!!! example "恢复训练示例"
 
     === "Python"
 
         ```python
         from ultralytics import YOLO
 
-        # Load the partially trained model
+        # 加载部分训练的模型
         model = YOLO("path/to/last.pt")
 
-        # Resume training
+        # 恢复训练
         results = model.train(resume=True)
         ```
 
@@ -337,23 +337,23 @@ To resume training from an interrupted session, set the `resume` argument to `Tr
         yolo train resume model=path/to/last.pt
         ```
 
-Check the section on [Resuming Interrupted Trainings](#resuming-interrupted-trainings) for more information.
+查看[恢复中断的训练](#resuming-interrupted-trainings)部分获取更多信息。
 
-### Can I train YOLO11 models on Apple silicon chips?
+### 我可以在Apple silicon芯片上训练YOLO11模型吗？
 
-Yes, Ultralytics YOLO11 supports training on Apple silicon chips utilizing the Metal Performance Shaders (MPS) framework. Specify 'mps' as your training device.
+是的，Ultralytics YOLO11支持在Apple silicon芯片上使用Metal Performance Shaders (MPS)框架进行训练。将'mps'指定为你的训练设备。
 
-!!! example "MPS Training Example"
+!!! example "MPS训练示例"
 
     === "Python"
 
         ```python
         from ultralytics import YOLO
 
-        # Load a pretrained model
+        # 加载预训练模型
         model = YOLO("yolo11n.pt")
 
-        # Train the model on Apple silicon chip (M1/M2/M3/M4)
+        # 在Apple silicon芯片（M1/M2/M3/M4）上训练模型
         results = model.train(data="coco8.yaml", epochs=100, imgsz=640, device="mps")
         ```
 
@@ -363,20 +363,20 @@ Yes, Ultralytics YOLO11 supports training on Apple silicon chips utilizing the M
         yolo detect train data=coco8.yaml model=yolo11n.pt epochs=100 imgsz=640 device=mps
         ```
 
-For more details, refer to the [Apple Silicon MPS Training](#apple-silicon-mps-training) section.
+更多详情，请参阅[Apple Silicon MPS训练](#apple-silicon-mps-training)部分。
 
-### What are the common training settings, and how do I configure them?
+### 常见的训练设置有哪些，我如何配置它们？
 
-Ultralytics YOLO11 allows you to configure a variety of training settings such as batch size, learning rate, epochs, and more through arguments. Here's a brief overview:
+Ultralytics YOLO11允许你通过参数配置各种训练设置，如批量大小、学习率、训练周期等。以下是一个简要概述：
 
-| Argument | Default | Description                                                            |
-| -------- | ------- | ---------------------------------------------------------------------- |
-| `model`  | `None`  | Path to the model file for training.                                   |
-| `data`   | `None`  | Path to the dataset configuration file (e.g., `coco8.yaml`).           |
-| `epochs` | `100`   | Total number of training epochs.                                       |
-| `batch`  | `16`    | Batch size, adjustable as integer or auto mode.                        |
-| `imgsz`  | `640`   | Target image size for training.                                        |
-| `device` | `None`  | Computational device(s) for training like `cpu`, `0`, `0,1`, or `mps`. |
-| `save`   | `True`  | Enables saving of training checkpoints and final model weights.        |
+| 参数     | 默认值 | 描述                                                   |
+| -------- | ------ | ------------------------------------------------------ |
+| `model`  | `None` | 用于训练的模型文件路径。                               |
+| `data`   | `None` | 数据集配置文件的路径（例如，`coco8.yaml`）。           |
+| `epochs` | `100`  | 总训练周期数。                                         |
+| `batch`  | `16`   | 批量大小，可调整为整数或自动模式。                     |
+| `imgsz`  | `640`  | 训练的目标图像大小。                                   |
+| `device` | `None` | 用于训练的计算设备，如`cpu`、`0`、`0,1`或`mps`。       |
+| `save`   | `True` | 启用保存训练检查点和最终模型权重。                     |
 
-For an in-depth guide on training settings, check the [Train Settings](#train-settings) section.
+有关训练设置的深入指南，请查看[训练设置](#train-settings)部分。

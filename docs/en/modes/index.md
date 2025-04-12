@@ -1,16 +1,16 @@
 ---
-comments: true
-description: Discover the diverse modes of Ultralytics YOLO11, including training, validation, prediction, export, tracking, and benchmarking. Maximize model performance and efficiency.
-keywords: Ultralytics, YOLO11, machine learning, model training, validation, prediction, export, tracking, benchmarking, object detection
+评论: true
+描述: 探索Ultralytics YOLO11的多种模式,包括训练、验证、预测、导出、跟踪和基准测试。最大化模型性能和效率。
+关键词: Ultralytics, YOLO11, 机器学习, 模型训练, 验证, 预测, 导出, 跟踪, 基准测试, 物体检测
 ---
 
-# Ultralytics YOLO11 Modes
+# Ultralytics YOLO11 模式
 
-<img width="1024" src="https://github.com/ultralytics/docs/releases/download/0/ultralytics-yolov8-ecosystem-integrations.avif" alt="Ultralytics YOLO ecosystem and integrations">
+<img width="1024" src="https://github.com/ultralytics/docs/releases/download/0/ultralytics-yolov8-ecosystem-integrations.avif" alt="Ultralytics YOLO生态系统和集成">
 
-## Introduction
+## 简介
 
-Ultralytics YOLO11 is not just another object detection model; it's a versatile framework designed to cover the entire lifecycle of [machine learning](https://www.ultralytics.com/glossary/machine-learning-ml) models—from data ingestion and model training to validation, deployment, and real-world tracking. Each mode serves a specific purpose and is engineered to offer you the flexibility and efficiency required for different tasks and use-cases.
+Ultralytics YOLO11不仅仅是另一个物体检测模型;它是一个versatile框架,旨在覆盖机器学习模型的整个生命周期—从数据摄入和模型训练到验证、部署和实际跟踪。每种模式都服务于特定目的,并设计为为不同任务和用例提供所需的灵活性和效率。
 
 <p align="center">
   <br>
@@ -20,63 +20,63 @@ Ultralytics YOLO11 is not just another object detection model; it's a versatile 
     allowfullscreen>
   </iframe>
   <br>
-  <strong>Watch:</strong> Ultralytics Modes Tutorial: Train, Validate, Predict, Export & Benchmark.
+  <strong>观看:</strong> Ultralytics模式教程:训练、验证、预测、导出和基准测试。
 </p>
 
-### Modes at a Glance
+### 模式概览
 
-Understanding the different **modes** that Ultralytics YOLO11 supports is critical to getting the most out of your models:
+了解Ultralytics YOLO11支持的不同**模式**对于充分利用您的模型至关重要:
 
-- **Train** mode: Fine-tune your model on custom or preloaded datasets.
-- **Val** mode: A post-training checkpoint to validate model performance.
-- **Predict** mode: Unleash the predictive power of your model on real-world data.
-- **Export** mode: Make your [model deployment](https://www.ultralytics.com/glossary/model-deployment)-ready in various formats.
-- **Track** mode: Extend your object detection model into real-time tracking applications.
-- **Benchmark** mode: Analyze the speed and accuracy of your model in diverse deployment environments.
+- **训练**模式:在自定义或预加载数据集上微调您的模型。
+- **验证**模式:训练后的检查点,用于验证模型性能。
+- **预测**模式:释放您的模型在真实世界数据上的预测能力。
+- **导出**模式:使您的模型准备好以各种格式部署。
+- **跟踪**模式:将您的物体检测模型扩展到实时跟踪应用。
+- **基准测试**模式:分析您的模型在不同部署环境中的速度和准确性。
 
-This comprehensive guide aims to give you an overview and practical insights into each mode, helping you harness the full potential of YOLO11.
+这份全面指南旨在为您提供每种模式的概述和实际洞察,帮助您充分发挥YOLO11的潜力。
 
-## [Train](train.md)
+## [训练](train.md)
 
-Train mode is used for training a YOLO11 model on a custom dataset. In this mode, the model is trained using the specified dataset and hyperparameters. The training process involves optimizing the model's parameters so that it can accurately predict the classes and locations of objects in an image. Training is essential for creating models that can recognize specific objects relevant to your application.
+训练模式用于在自定义数据集上训练YOLO11模型。在此模式下,使用指定的数据集和超参数训练模型。训练过程涉及优化模型的参数,以便它可以准确预测图像中物体的类别和位置。训练对于创建可以识别与您的应用相关的特定物体的模型至关重要。
 
-[Train Examples](train.md){ .md-button }
+[训练示例](train.md){ .md-button }
 
-## [Val](val.md)
+[Val](val.md)
 
-Val mode is used for validating a YOLO11 model after it has been trained. In this mode, the model is evaluated on a validation set to measure its accuracy and generalization performance. Validation helps identify potential issues like [overfitting](https://www.ultralytics.com/glossary/overfitting) and provides metrics such as [mean Average Precision](https://www.ultralytics.com/glossary/mean-average-precision-map) (mAP) to quantify model performance. This mode is crucial for tuning hyperparameters and improving overall model effectiveness.
+Val模式用于在训练完成后验证YOLO11模型。在这种模式下,模型会在验证集上进行评估,以衡量其准确性和泛化性能。验证有助于识别潜在问题,如[过拟合](https://www.ultralytics.com/glossary/overfitting),并提供诸如[平均精度均值](https://www.ultralytics.com/glossary/mean-average-precision-map)(mAP)等指标来量化模型性能。这种模式对于调整超参数和提高整体模型效果至关重要。
 
-[Val Examples](val.md){ .md-button }
+[Val示例](val.md){ .md-button }
 
 ## [Predict](predict.md)
 
-Predict mode is used for making predictions using a trained YOLO11 model on new images or videos. In this mode, the model is loaded from a checkpoint file, and the user can provide images or videos to perform inference. The model identifies and localizes objects in the input media, making it ready for real-world applications. Predict mode is the gateway to applying your trained model to solve practical problems.
+Predict模式用于使用训练好的YOLO11模型对新的图像或视频进行预测。在这种模式下,模型从检查点文件加载,用户可以提供图像或视频来执行推理。模型识别并定位输入媒体中的对象,使其可以应用于实际问题。Predict模式是将训练好的模型应用于解决实际问题的入口。
 
-[Predict Examples](predict.md){ .md-button }
+[Predict示例](predict.md){ .md-button }
 
 ## [Export](export.md)
 
-Export mode is used for converting a YOLO11 model to formats suitable for deployment across different platforms and devices. This mode transforms your PyTorch model into optimized formats like ONNX, TensorRT, or CoreML, enabling deployment in production environments. Exporting is essential for integrating your model with various software applications or hardware devices, often resulting in significant performance improvements.
+Export模式用于将YOLO11模型转换为适合在不同平台和设备上部署的格式。这种模式将PyTorch模型转换为优化的格式,如ONNX、TensorRT或CoreML,使其能够在生产环境中部署。导出对于将模型与各种软件应用程序或硬件设备集成至关重要,通常会带来显著的性能提升。
 
-[Export Examples](export.md){ .md-button }
+[Export示例](export.md){ .md-button }
 
 ## [Track](track.md)
 
-Track mode extends YOLO11's object detection capabilities to track objects across video frames or live streams. This mode is particularly valuable for applications requiring persistent object identification, such as [surveillance systems](https://www.ultralytics.com/blog/shattering-the-surveillance-status-quo-with-vision-ai) or [self-driving cars](https://www.ultralytics.com/solutions/ai-in-automotive). Track mode implements sophisticated algorithms like ByteTrack to maintain object identity across frames, even when objects temporarily disappear from view.
+Track模式扩展了YOLO11的对象检测能力,可以跟踪视频帧或实时流中的对象。这种模式对于需要持续对象识别的应用特别有价值,例如[监控系统](https://www.ultralytics.com/blog/shattering-the-surveillance-status-quo-with-vision-ai)或[自动驾驶汽车](https://www.ultralytics.com/solutions/ai-in-automotive)。Track模式实现了复杂的算法,如ByteTrack,以在帧之间保持对象身份,即使对象暂时从视图中消失。
 
-[Track Examples](track.md){ .md-button }
+[Track示例](track.md){ .md-button }
 
 ## [Benchmark](benchmark.md)
 
-Benchmark mode profiles the speed and accuracy of various export formats for YOLO11. This mode provides comprehensive metrics on model size, accuracy (mAP50-95 for detection tasks or accuracy_top5 for classification), and inference time across different formats like ONNX, [OpenVINO](https://docs.ultralytics.com/integrations/openvino/), and TensorRT. Benchmarking helps you select the optimal export format based on your specific requirements for speed and accuracy in your deployment environment.
+Benchmark模式对YOLO11的各种导出格式的速度和准确性进行分析。这种模式提供了全面的指标,包括模型大小、准确性(检测任务的mAP50-95或分类任务的accuracy_top5)以及不同格式(如ONNX、[OpenVINO](https://docs.ultralytics.com/integrations/openvino/)和TensorRT)的推理时间。基准测试有助于您根据部署环境中对速度和准确性的具体要求选择最佳的导出格式。
 
-[Benchmark Examples](benchmark.md){ .md-button }
+[Benchmark示例](benchmark.md){ .md-button }
 
-## FAQ
+## 常见问题
 
-### How do I train a custom [object detection](https://www.ultralytics.com/glossary/object-detection) model with Ultralytics YOLO11?
+### 如何使用Ultralytics YOLO11训练自定义[对象检测](https://www.ultralytics.com/glossary/object-detection)模型?
 
-Training a custom object detection model with Ultralytics YOLO11 involves using the train mode. You need a dataset formatted in YOLO format, containing images and corresponding annotation files. Use the following command to start the training process:
+使用Ultralytics YOLO11训练自定义对象检测模型涉及使用train模式。您需要一个按YOLO格式组织的数据集,包含图像和相应的注释文件。使用以下命令开始训练过程:
 
 !!! example
 
@@ -85,31 +85,31 @@ Training a custom object detection model with Ultralytics YOLO11 involves using 
         ```python
         from ultralytics import YOLO
 
-        # Load a pre-trained YOLO model (you can choose n, s, m, l, or x versions)
+        # 加载预训练的YOLO模型(您可以选择n、s、m、l或x版本)
         model = YOLO("yolo11n.pt")
 
-        # Start training on your custom dataset
+        # 在自定义数据集上开始训练
         model.train(data="path/to/dataset.yaml", epochs=100, imgsz=640)
         ```
 
     === "CLI"
 
         ```bash
-        # Train a YOLO model from the command line
+        # 从命令行训练YOLO模型
         yolo train data=path/to/dataset.yaml epochs=100 imgsz=640
         ```
 
-For more detailed instructions, you can refer to the [Ultralytics Train Guide](../modes/train.md).
+有关更详细的说明,您可以参考[Ultralytics训练指南](../modes/train.md)。
 
-### What metrics does Ultralytics YOLO11 use to validate the model's performance?
+### Ultralytics YOLO11使用哪些指标来验证模型的性能?
 
-Ultralytics YOLO11 uses various metrics during the validation process to assess model performance. These include:
+Ultralytics YOLO11在验证过程中使用各种指标来评估模型性能。这些包括:
 
-- **mAP (mean Average Precision)**: This evaluates the accuracy of object detection.
-- **IOU (Intersection over Union)**: Measures the overlap between predicted and ground truth bounding boxes.
-- **[Precision](https://www.ultralytics.com/glossary/precision) and [Recall](https://www.ultralytics.com/glossary/recall)**: Precision measures the ratio of true positive detections to the total detected positives, while recall measures the ratio of true positive detections to the total actual positives.
+- **mAP(平均精度均值)**: 这评估对象检测的准确性。
+- **IOU(交并比)**: 测量预测边界框和真实边界框之间的重叠。
+- **[精确度](https://www.ultralytics.com/glossary/precision)和[召回率](https://www.ultralytics.com/glossary/recall)**: 精确度测量真阳性检测与总检测阳性的比率,而召回率测量真阳性检测与总实际阳性的比率。
 
-You can run the following command to start the validation:
+您可以运行以下命令开始验证:
 
 !!! example
 
@@ -118,25 +118,25 @@ You can run the following command to start the validation:
         ```python
         from ultralytics import YOLO
 
-        # Load a pre-trained or custom YOLO model
+        # 加载预训练或自定义YOLO模型
         model = YOLO("yolo11n.pt")
 
-        # Run validation on your dataset
+        # 在您的数据集上运行验证
         model.val(data="path/to/validation.yaml")
         ```
 
     === "CLI"
 
         ```bash
-        # Validate a YOLO model from the command line
+        # 从命令行验证YOLO模型
         yolo val data=path/to/validation.yaml
         ```
 
-Refer to the [Validation Guide](../modes/val.md) for further details.
+有关更多详细信息,请参阅[验证指南](../modes/val.md)。
 
-### How can I export my YOLO11 model for deployment?
+### 如何导出YOLO11模型以进行部署?
 
-Ultralytics YOLO11 offers export functionality to convert your trained model into various deployment formats such as ONNX, TensorRT, CoreML, and more. Use the following example to export your model:
+Ultralytics YOLO11提供导出功能,可将训练好的模型转换为各种部署格式,如ONNX、TensorRT、CoreML等。使用以下示例导出您的模型:
 
 !!! example
 
@@ -145,25 +145,25 @@ Ultralytics YOLO11 offers export functionality to convert your trained model int
         ```python
         from ultralytics import YOLO
 
-        # Load your trained YOLO model
+        # 加载训练好的YOLO模型
         model = YOLO("yolo11n.pt")
 
-        # Export the model to ONNX format (you can specify other formats as needed)
+        # 将模型导出为ONNX格式(您可以根据需要指定其他格式)
         model.export(format="onnx")
         ```
 
     === "CLI"
 
         ```bash
-        # Export a YOLO model to ONNX format from the command line
+        # 从命令行将YOLO模型导出为ONNX格式
         yolo export model=yolo11n.pt format=onnx
         ```
 
-Detailed steps for each export format can be found in the [Export Guide](../modes/export.md).
+每种导出格式的详细步骤可以在[导出指南](../modes/export.md)中找到。
 
-### What is the purpose of the benchmark mode in Ultralytics YOLO11?
+### Ultralytics YOLO11中benchmark模式的目的是什么?
 
-Benchmark mode in Ultralytics YOLO11 is used to analyze the speed and [accuracy](https://www.ultralytics.com/glossary/accuracy) of various export formats such as ONNX, TensorRT, and OpenVINO. It provides metrics like model size, `mAP50-95` for object detection, and inference time across different hardware setups, helping you choose the most suitable format for your deployment needs.
+Ultralytics YOLO11中的Benchmark模式用于分析各种导出格式(如ONNX、TensorRT和OpenVINO)的速度和[准确性](https://www.ultralytics.com/glossary/accuracy)。它提供了诸如模型大小、对象检测的`mAP50-95`以及在不同硬件设置下的推理时间等指标,帮助您为部署需求选择最合适的格式。
 
 !!! example
 
@@ -172,24 +172,24 @@ Benchmark mode in Ultralytics YOLO11 is used to analyze the speed and [accuracy]
         ```python
         from ultralytics.utils.benchmarks import benchmark
 
-        # Run benchmark on GPU (device 0)
-        # You can adjust parameters like model, dataset, image size, and precision as needed
+        # 在GPU(设备0)上运行基准测试
+        # 您可以根据需要调整模型、数据集、图像大小和精度等参数
         benchmark(model="yolo11n.pt", data="coco8.yaml", imgsz=640, half=False, device=0)
         ```
 
     === "CLI"
 
         ```bash
-        # Benchmark a YOLO model from the command line
-        # Adjust parameters as needed for your specific use case
+        # 从命令行对YOLO模型进行基准测试
+        # 根据您的具体用例调整参数
         yolo benchmark model=yolo11n.pt data='coco8.yaml' imgsz=640 half=False device=0
         ```
 
-For more details, refer to the [Benchmark Guide](../modes/benchmark.md).
+有关更多详细信息,请参阅[基准测试指南](../modes/benchmark.md)。
 
-### How can I perform real-time object tracking using Ultralytics YOLO11?
+### 如何使用Ultralytics YOLO11进行实时对象跟踪?
 
-Real-time object tracking can be achieved using the track mode in Ultralytics YOLO11. This mode extends object detection capabilities to track objects across video frames or live feeds. Use the following example to enable tracking:
+使用Ultralytics YOLO11的track模式可以实现实时对象跟踪。这种模式扩展了对象检测能力,可以跟踪视频帧或实时流中的对象。使用以下示例启用跟踪:
 
 !!! example
 
@@ -198,20 +198,20 @@ Real-time object tracking can be achieved using the track mode in Ultralytics YO
         ```python
         from ultralytics import YOLO
 
-        # Load a pre-trained YOLO model
+        # 加载预训练的YOLO模型
         model = YOLO("yolo11n.pt")
 
-        # Start tracking objects in a video
-        # You can also use live video streams or webcam input
+        # 开始跟踪视频中的对象
+        # 您也可以使用实时视频流或网络摄像头输入
         model.track(source="path/to/video.mp4")
         ```
 
     === "CLI"
 
         ```bash
-        # Perform object tracking on a video from the command line
-        # You can specify different sources like webcam (0) or RTSP streams
+        # 从命令行对视频进行对象跟踪
+        # 您可以指定不同的源,如网络摄像头(0)或RTSP流
         yolo track source=path/to/video.mp4
         ```
 
-For in-depth instructions, visit the [Track Guide](../modes/track.md).
+有关详细说明,请访问[跟踪指南](../modes/track.md)。
