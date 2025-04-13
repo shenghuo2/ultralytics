@@ -148,34 +148,34 @@ not_in_nav: |
   /macros
 
 nav:
-  - Home:
-      - Home: index.md
-      - Quickstart: quickstart.md
-      - Modes:
+  - 首页:
+      - 首页: index.md
+      - 快速入门: quickstart.md
+      - 模式:
           - modes/index.md
-          - Train: modes/train.md
-          - Val: modes/val.md
-          - Predict: modes/predict.md
-          - Export: modes/export.md
-          - Track: modes/track.md
-          - Benchmark: modes/benchmark.md
-      - Tasks:
+          - 训练: modes/train.md
+          - 验证: modes/val.md
+          - 预测: modes/predict.md
+          - 导出: modes/export.md
+          - 跟踪: modes/track.md
+          - 基准测试: modes/benchmark.md
+      - 任务:
           - tasks/index.md
-          - Detect: tasks/detect.md
-          - Segment: tasks/segment.md
-          - Classify: tasks/classify.md
-          - Pose: tasks/pose.md
-          - OBB: tasks/obb.md
-      - Models:
+          - 检测: tasks/detect.md
+          - 分割: tasks/segment.md
+          - 分类: tasks/classify.md
+          - 姿态: tasks/pose.md
+          - 有向边界框: tasks/obb.md
+      - 模型:
           - models/index.md
-      - Datasets:
+      - 数据集:
           - datasets/index.md
-      - Solutions:
+      - 解决方案:
           - solutions/index.md
-      - Guides:
+      - 指南:
           - guides/index.md
-      - YOLO11 🚀 NEW: models/yolo11.md # for promotion of new pages
-      - Languages:
+      - YOLO11 🚀 新: models/yolo11.md # 用于推广新页面
+      - 语言:
           - 🇬🇧&nbsp English: https://ultralytics.com/docs/
           - 🇨🇳&nbsp 简体中文: https://docs.ultralytics.com/zh/
           - 🇰🇷&nbsp 한국어: https://docs.ultralytics.com/ko/
@@ -191,67 +191,67 @@ nav:
           - 🇸🇦&nbsp العربية: https://docs.ultralytics.com/ar/
   - Quickstart:
       - quickstart.md
-      - Usage:
-          - CLI: usage/cli.md
+      - 使用:
+          - 命令行界面: usage/cli.md
           - Python: usage/python.md
-          - Callbacks: usage/callbacks.md
-          - Configuration: usage/cfg.md
-          - Simple Utilities: usage/simple-utilities.md
-          - Advanced Customization: usage/engine.md
-      - Modes:
+          - 回调: usage/callbacks.md
+          - 配置: usage/cfg.md
+          - 简单实用工具: usage/simple-utilities.md
+          - 高级自定义: usage/engine.md
+      - 模式:
           - modes/index.md
-          - Train: modes/train.md
-          - Val: modes/val.md
-          - Predict: modes/predict.md
-          - Export: modes/export.md
-          - Track: modes/track.md
-          - Benchmark: modes/benchmark.md
-      - Tasks:
+          - 训练: modes/train.md
+          - 验证: modes/val.md
+          - 预测: modes/predict.md
+          - 导出: modes/export.md
+          - 跟踪: modes/track.md
+          - 基准测试: modes/benchmark.md
+      - 任务:
           - tasks/index.md
-          - Detect: tasks/detect.md
-          - Segment: tasks/segment.md
-          - Classify: tasks/classify.md
-          - Pose: tasks/pose.md
-          - OBB: tasks/obb.md
-      - Models:
+          - 检测: tasks/detect.md
+          - 分割: tasks/segment.md
+          - 分类: tasks/classify.md
+          - 姿态: tasks/pose.md
+          - 有向边界框: tasks/obb.md
+      - 模型:
           - models/index.md
-      - Datasets:
+      - 数据集:
           - datasets/index.md
-      - Solutions:
+      - 解决方案:
           - solutions/index.md
-      - Guides:
+      - 指南:
           - guides/index.md
-  - Modes:
+  - 模式:
       - modes/index.md
-      - Train: modes/train.md
-      - Val: modes/val.md
-      - Predict: modes/predict.md
-      - Export: modes/export.md
-      - Track: modes/track.md
-      - Benchmark: modes/benchmark.md
-      - Tasks:
+      - 训练: modes/train.md
+      - 验证: modes/val.md
+      - 预测: modes/predict.md
+      - 导出: modes/export.md
+      - 跟踪: modes/track.md
+      - 基准测试: modes/benchmark.md
+      - 任务:
           - tasks/index.md
-          - Detect: tasks/detect.md
-          - Segment: tasks/segment.md
-          - Classify: tasks/classify.md
-          - Pose: tasks/pose.md
-          - OBB: tasks/obb.md
-  - Tasks:
+          - 检测: tasks/detect.md
+          - 分割: tasks/segment.md
+          - 分类: tasks/classify.md
+          - 姿态: tasks/pose.md
+          - 有向边界框: tasks/obb.md
+  - 任务:
       - tasks/index.md
-      - Detect: tasks/detect.md
-      - Segment: tasks/segment.md
-      - Classify: tasks/classify.md
-      - Pose: tasks/pose.md
-      - OBB: tasks/obb.md
-      - Modes:
+      - 检测: tasks/detect.md
+      - 分割: tasks/segment.md
+      - 分类: tasks/classify.md
+      - 姿态: tasks/pose.md
+      - 有向边界框: tasks/obb.md
+      - 模式:
           - modes/index.md
-          - Train: modes/train.md
-          - Val: modes/val.md
-          - Predict: modes/predict.md
-          - Export: modes/export.md
-          - Track: modes/track.md
-          - Benchmark: modes/benchmark.md
-  - Models:
+          - 训练: modes/train.md
+          - 验证: modes/val.md
+          - 预测: modes/predict.md
+          - 导出: modes/export.md
+          - 跟踪: modes/track.md
+          - 基准测试: modes/benchmark.md
+  - 模型:
       - models/index.md
       - YOLOv3: models/yolov3.md
       - YOLOv4: models/yolov4.md
@@ -261,19 +261,19 @@ nav:
       - YOLOv8: models/yolov8.md
       - YOLOv9: models/yolov9.md
       - YOLOv10: models/yolov10.md
-      - YOLO11 🚀 NEW: models/yolo11.md
+      - YOLO11 🚀 新: models/yolo11.md
       - YOLO12: models/yolo12.md
-      - SAM (Segment Anything Model): models/sam.md
-      - SAM 2 (Segment Anything Model 2): models/sam-2.md
-      - MobileSAM (Mobile Segment Anything Model): models/mobile-sam.md
-      - FastSAM (Fast Segment Anything Model): models/fast-sam.md
-      - YOLO-NAS (Neural Architecture Search): models/yolo-nas.md
-      - RT-DETR (Realtime Detection Transformer): models/rtdetr.md
-      - YOLO-World (Real-Time Open-Vocabulary Object Detection): models/yolo-world.md
-      - YOLOE (Real-Time Seeing Anything): models/yoloe.md
-  - Datasets:
+      - SAM（分割任意物体模型）: models/sam.md
+      - SAM 2（分割任意物体模型 2）: models/sam-2.md
+      - MobileSAM（移动版分割任意物体模型）: models/mobile-sam.md
+      - FastSAM（快速分割任意物体模型）: models/fast-sam.md
+      - YOLO-NAS（神经架构搜索）: models/yolo-nas.md
+      - RT-DETR（实时检测变换器）: models/rtdetr.md
+      - YOLO-World（实时开放词汇目标检测）: models/yolo-world.md
+      - YOLOE（实时看见任何物体）: models/yoloe.md
+  - 数据集:
       - datasets/index.md
-      - Detection:
+      - 检测:
           - datasets/detect/index.md
           - Argoverse: datasets/detect/argoverse.md
           - COCO: datasets/detect/coco.md
@@ -288,25 +288,25 @@ nav:
           - VOC: datasets/detect/voc.md
           - xView: datasets/detect/xview.md
           - RF100: datasets/detect/roboflow-100.md
-          - Brain-tumor: datasets/detect/brain-tumor.md
-          - African-wildlife: datasets/detect/african-wildlife.md
-          - Signature: datasets/detect/signature.md
-          - Medical-pills: datasets/detect/medical-pills.md
-      - Segmentation:
+          - 脑肿瘤: datasets/detect/brain-tumor.md
+          - 非洲野生动物: datasets/detect/african-wildlife.md
+          - 签名: datasets/detect/signature.md
+          - 医疗药丸: datasets/detect/medical-pills.md
+      - 分割:
           - datasets/segment/index.md
           - COCO: datasets/segment/coco.md
           - COCO8-seg: datasets/segment/coco8-seg.md
-          - Crack-seg: datasets/segment/crack-seg.md
-          - Carparts-seg: datasets/segment/carparts-seg.md
-          - Package-seg: datasets/segment/package-seg.md
-      - Pose:
+          - 裂缝分割: datasets/segment/crack-seg.md
+          - 汽车零件分割: datasets/segment/carparts-seg.md
+          - 包装分割: datasets/segment/package-seg.md
+      - 姿态:
           - datasets/pose/index.md
           - COCO: datasets/pose/coco.md
           - COCO8-pose: datasets/pose/coco8-pose.md
-          - Tiger-pose: datasets/pose/tiger-pose.md
-          - Hand-keypoints: datasets/pose/hand-keypoints.md
-          - Dog-pose: datasets/pose/dog-pose.md
-      - Classification:
+          - 老虎姿态: datasets/pose/tiger-pose.md
+          - 手部关键点: datasets/pose/hand-keypoints.md
+          - 狗姿态: datasets/pose/dog-pose.md
+      - 分类:
           - datasets/classify/index.md
           - Caltech 101: datasets/classify/caltech101.md
           - Caltech 256: datasets/classify/caltech256.md
@@ -318,339 +318,339 @@ nav:
           - Imagenette: datasets/classify/imagenette.md
           - Imagewoof: datasets/classify/imagewoof.md
           - MNIST: datasets/classify/mnist.md
-      - Oriented Bounding Boxes (OBB):
+      - 有向边界框 (OBB):
           - datasets/obb/index.md
           - DOTAv2: datasets/obb/dota-v2.md
           - DOTA8: datasets/obb/dota8.md
-      - Multi-Object Tracking:
+      - 多目标跟踪:
           - datasets/track/index.md
-  - Solutions 🚀:
+  - 解决方案 🚀:
       - solutions/index.md
-      - Object Counting: guides/object-counting.md
-      - Object Cropping: guides/object-cropping.md
-      - Object Blurring: guides/object-blurring.md
-      - Workouts Monitoring: guides/workouts-monitoring.md
-      - Objects Counting in Regions: guides/region-counting.md
-      - Security Alarm System: guides/security-alarm-system.md
-      - Heatmaps: guides/heatmaps.md
-      - Instance Segmentation with Object Tracking: guides/instance-segmentation-and-tracking.md
-      - VisionEye View Objects Mapping: guides/vision-eye.md
-      - Speed Estimation: guides/speed-estimation.md
-      - Distance Calculation: guides/distance-calculation.md
-      - Queue Management: guides/queue-management.md
-      - Parking Management: guides/parking-management.md
-      - Analytics: guides/analytics.md
-      - Live Inference: guides/streamlit-live-inference.md
-      - Track Objects in Zone 🚀 NEW: guides/trackzone.md
-  - Guides:
+      - 物体计数: guides/object-counting.md
+      - 物体裁剪: guides/object-cropping.md
+      - 物体模糊: guides/object-blurring.md
+      - 锻炼监测: guides/workouts-monitoring.md
+      - 区域物体计数: guides/region-counting.md
+      - 安全警报系统: guides/security-alarm-system.md
+      - 热力图: guides/heatmaps.md
+      - 实例分割与物体跟踪: guides/instance-segmentation-and-tracking.md
+      - VisionEye 视角物体映射: guides/vision-eye.md
+      - 速度估计: guides/speed-estimation.md
+      - 距离计算: guides/distance-calculation.md
+      - 队列管理: guides/queue-management.md
+      - 停车管理: guides/parking-management.md
+      - 分析: guides/analytics.md
+      - 实时推理: guides/streamlit-live-inference.md
+      - 区域内物体跟踪 🚀 新: guides/trackzone.md
+  - 指南:
       - guides/index.md
-      - YOLO Common Issues: guides/yolo-common-issues.md
-      - YOLO Performance Metrics: guides/yolo-performance-metrics.md
-      - YOLO Thread-Safe Inference: guides/yolo-thread-safe-inference.md
-      - Model Deployment Options: guides/model-deployment-options.md
-      - K-Fold Cross Validation: guides/kfold-cross-validation.md
-      - Hyperparameter Tuning: guides/hyperparameter-tuning.md
-      - SAHI Tiled Inference: guides/sahi-tiled-inference.md
-      - AzureML Quickstart: guides/azureml-quickstart.md
-      - Conda Quickstart: guides/conda-quickstart.md
-      - Docker Quickstart: guides/docker-quickstart.md
-      - Raspberry Pi: guides/raspberry-pi.md
+      - YOLO 常见问题: guides/yolo-common-issues.md
+      - YOLO 性能指标: guides/yolo-performance-metrics.md
+      - YOLO 线程安全推理: guides/yolo-thread-safe-inference.md
+      - 模型部署选项: guides/model-deployment-options.md
+      - K折交叉验证: guides/kfold-cross-validation.md
+      - 超参数调优: guides/hyperparameter-tuning.md
+      - SAHI 平铺推理: guides/sahi-tiled-inference.md
+      - AzureML 快速入门: guides/azureml-quickstart.md
+      - Conda 快速入门: guides/conda-quickstart.md
+      - Docker 快速入门: guides/docker-quickstart.md
+      - 树莓派: guides/raspberry-pi.md
       - NVIDIA Jetson: guides/nvidia-jetson.md
-      - DeepStream on NVIDIA Jetson: guides/deepstream-nvidia-jetson.md
-      - Triton Inference Server: guides/triton-inference-server.md
-      - Isolating Segmentation Objects: guides/isolating-segmentation-objects.md
-      - Edge TPU on Raspberry Pi: guides/coral-edge-tpu-on-raspberry-pi.md
-      - Viewing Inference Images in a Terminal: guides/view-results-in-terminal.md
-      - OpenVINO Latency vs Throughput modes: guides/optimizing-openvino-latency-vs-throughput-modes.md
-      - ROS Quickstart: guides/ros-quickstart.md
-      - Steps of a Computer Vision Project: guides/steps-of-a-cv-project.md
-      - Defining A Computer Vision Project's Goals: guides/defining-project-goals.md
-      - Data Collection and Annotation: guides/data-collection-and-annotation.md
-      - Preprocessing Annotated Data: guides/preprocessing_annotated_data.md
-      - Tips for Model Training: guides/model-training-tips.md
-      - Insights on Model Evaluation and Fine-Tuning: guides/model-evaluation-insights.md
-      - A Guide on Model Testing: guides/model-testing.md
-      - Best Practices for Model Deployment: guides/model-deployment-practices.md
-      - Maintaining Your Computer Vision Model: guides/model-monitoring-and-maintenance.md
-      - Explorer:
+      - NVIDIA Jetson 上的 DeepStream: guides/deepstream-nvidia-jetson.md
+      - Triton 推理服务器: guides/triton-inference-server.md
+      - 隔离分割对象: guides/isolating-segmentation-objects.md
+      - 树莓派上的 Edge TPU: guides/coral-edge-tpu-on-raspberry-pi.md
+      - 在终端中查看推理图像: guides/view-results-in-terminal.md
+      - OpenVINO 延迟与吞吐量模式: guides/optimizing-openvino-latency-vs-throughput-modes.md
+      - ROS 快速入门: guides/ros-quickstart.md
+      - 计算机视觉项目的步骤: guides/steps-of-a-cv-project.md
+      - 定义计算机视觉项目目标: guides/defining-project-goals.md
+      - 数据收集和标注: guides/data-collection-and-annotation.md
+      - 预处理标注数据: guides/preprocessing_annotated_data.md
+      - 模型训练技巧: guides/model-training-tips.md
+      - 模型评估和微调的见解: guides/model-evaluation-insights.md
+      - 模型测试指南: guides/model-testing.md
+      - 模型部署最佳实践: guides/model-deployment-practices.md
+      - 维护您的计算机视觉模型: guides/model-monitoring-and-maintenance.md
+      - 探索器:
           - datasets/explorer/index.md
-          - Explorer API: datasets/explorer/api.md
-          - Explorer Dashboard Demo: datasets/explorer/dashboard.md
-          - VOC Exploration Example: datasets/explorer/explorer.md
+          - 探索器 API: datasets/explorer/api.md
+          - 探索器仪表板演示: datasets/explorer/dashboard.md
+          - VOC 探索示例: datasets/explorer/explorer.md
       - YOLOv5:
           - yolov5/index.md
-          - Quickstart: yolov5/quickstart_tutorial.md
-          - Environments:
-              - Amazon Web Services (AWS): yolov5/environments/aws_quickstart_tutorial.md
-              - Google Cloud (GCP): yolov5/environments/google_cloud_quickstart_tutorial.md
+          - 快速入门: yolov5/quickstart_tutorial.md
+          - 环境:
+              - 亚马逊网络服务 (AWS): yolov5/environments/aws_quickstart_tutorial.md
+              - 谷歌云 (GCP): yolov5/environments/google_cloud_quickstart_tutorial.md
               - AzureML: yolov5/environments/azureml_quickstart_tutorial.md
-              - Docker Image: yolov5/environments/docker_image_quickstart_tutorial.md
-          - Tutorials:
-              - Train Custom Data: yolov5/tutorials/train_custom_data.md
-              - Tips for Best Training Results: yolov5/tutorials/tips_for_best_training_results.md
-              - Multi-GPU Training: yolov5/tutorials/multi_gpu_training.md
+              - Docker 镜像: yolov5/environments/docker_image_quickstart_tutorial.md
+          - 教程:
+              - 训练自定义数据: yolov5/tutorials/train_custom_data.md
+              - 获得最佳训练结果的技巧: yolov5/tutorials/tips_for_best_training_results.md
+              - 多GPU训练: yolov5/tutorials/multi_gpu_training.md
               - PyTorch Hub: yolov5/tutorials/pytorch_hub_model_loading.md
-              - TFLite, ONNX, CoreML, TensorRT Export: yolov5/tutorials/model_export.md
-              - Test-Time Augmentation (TTA): yolov5/tutorials/test_time_augmentation.md
-              - Model Ensembling: yolov5/tutorials/model_ensembling.md
-              - Pruning/Sparsity Tutorial: yolov5/tutorials/model_pruning_and_sparsity.md
-              - Hyperparameter evolution: yolov5/tutorials/hyperparameter_evolution.md
-              - Transfer learning with frozen layers: yolov5/tutorials/transfer_learning_with_frozen_layers.md
-              - Architecture Summary: yolov5/tutorials/architecture_description.md
-              - Neural Magic's DeepSparse: yolov5/tutorials/neural_magic_pruning_quantization.md
-              - Comet Logging: yolov5/tutorials/comet_logging_integration.md
-              - Clearml Logging: yolov5/tutorials/clearml_logging_integration.md
-  - Integrations:
-      - integrations/index.md
-      - Amazon SageMaker: integrations/amazon-sagemaker.md
-      - ClearML: integrations/clearml.md
-      - Comet ML: integrations/comet.md
-      - CoreML: integrations/coreml.md
-      - DVC: integrations/dvc.md
-      - Google Colab: integrations/google-colab.md
-      - Gradio: integrations/gradio.md
-      - IBM Watsonx: integrations/ibm-watsonx.md
-      - JupyterLab: integrations/jupyterlab.md
-      - Kaggle: integrations/kaggle.md
-      - MLflow: integrations/mlflow.md
-      - Neural Magic: integrations/neural-magic.md
-      - ONNX: integrations/onnx.md
-      - OpenVINO: integrations/openvino.md
-      - PaddlePaddle: integrations/paddlepaddle.md
-      - MNN: integrations/mnn.md
-      - NCNN: integrations/ncnn.md
-      - Paperspace Gradient: integrations/paperspace.md
-      - Ray Tune: integrations/ray-tune.md
-      - Roboflow: integrations/roboflow.md
-      - TF GraphDef: integrations/tf-graphdef.md
-      - TF SavedModel: integrations/tf-savedmodel.md
-      - TF.js: integrations/tfjs.md
-      - TFLite: integrations/tflite.md
-      - TFLite Edge TPU: integrations/edge-tpu.md
-      - TensorBoard: integrations/tensorboard.md
-      - TensorRT: integrations/tensorrt.md
-      - TorchScript: integrations/torchscript.md
-      - VS Code: integrations/vscode.md
-      - Weights & Biases: integrations/weights-biases.md
-      - Albumentations: integrations/albumentations.md
-      - SONY IMX500: integrations/sony-imx500.md
-      - Rockchip RKNN: integrations/rockchip-rknn.md
-      - Seeed Studio reCamera: integrations/seeedstudio-recamera.md
-  - HUB:
-      - hub/index.md
-      - Web:
-          - hub/index.md
-          - Quickstart: hub/quickstart.md
-          - Datasets: hub/datasets.md
-          - Projects: hub/projects.md
-          - Models: hub/models.md
-          - Pro: hub/pro.md
-          - Cloud Training: hub/cloud-training.md
-          - Inference API: hub/inference-api.md
-          - Teams: hub/teams.md
-          - Integrations: hub/integrations.md
-      - App:
-          - hub/app/index.md
-          - iOS: hub/app/ios.md
-          - Android: hub/app/android.md
-      - Python SDK:
-          - hub/sdk/index.md
-          - Quickstart: hub/sdk/quickstart.md
-          - Model: hub/sdk/model.md
-          - Dataset: hub/sdk/dataset.md
-          - Project: hub/sdk/project.md
-          - Reference:
-              - base:
-                  - api_client: hub/sdk/reference/base/api_client.md
-                  - auth: hub/sdk/reference/base/auth.md
-                  - crud_client: hub/sdk/reference/base/crud_client.md
-                  - paginated_list: hub/sdk/reference/base/paginated_list.md
-                  - server_clients: hub/sdk/reference/base/server_clients.md
-              - helpers:
-                  - error_handler: hub/sdk/reference/helpers/error_handler.md
-                  - exceptions: hub/sdk/reference/helpers/exceptions.md
-                  - logger: hub/sdk/reference/helpers/logger.md
-                  - utils: hub/sdk/reference/helpers/utils.md
-              - hub_client: hub/sdk/reference/hub_client.md
-              - modules:
-                  - datasets: hub/sdk/reference/modules/datasets.md
-                  - models: hub/sdk/reference/modules/models.md
-                  - projects: hub/sdk/reference/modules/projects.md
-                  - teams: hub/sdk/reference/modules/teams.md
-                  - users: hub/sdk/reference/modules/users.md
-      - REST API:
-          - hub/api/index.md
+              - TFLite, ONNX, CoreML, TensorRT导出: yolov5/tutorials/model_export.md
+              - 测试时增强(TTA): yolov5/tutorials/test_time_augmentation.md
+              - 模型集成: yolov5/tutorials/model_ensembling.md
+              - 剪枝/稀疏化教程: yolov5/tutorials/model_pruning_and_sparsity.md
+              - 超参数进化: yolov5/tutorials/hyperparameter_evolution.md
+              - 使用冻结层进行迁移学习: yolov5/tutorials/transfer_learning_with_frozen_layers.md
+              - 架构概述: yolov5/tutorials/architecture_description.md
+              - Neural Magic的DeepSparse: yolov5/tutorials/neural_magic_pruning_quantization.md
+              - Comet日志记录: yolov5/tutorials/comet_logging_integration.md
+              - Clearml日志记录: yolov5/tutorials/clearml_logging_integration.md
+          - 集成:
+              - integrations/index.md
+              - Amazon SageMaker: integrations/amazon-sagemaker.md
+              - ClearML: integrations/clearml.md
+              - Comet ML: integrations/comet.md
+              - CoreML: integrations/coreml.md
+              - DVC: integrations/dvc.md
+              - Google Colab: integrations/google-colab.md
+              - Gradio: integrations/gradio.md
+              - IBM Watsonx: integrations/ibm-watsonx.md
+              - JupyterLab: integrations/jupyterlab.md
+              - Kaggle: integrations/kaggle.md
+              - MLflow: integrations/mlflow.md
+              - Neural Magic: integrations/neural-magic.md
+              - ONNX: integrations/onnx.md
+              - OpenVINO: integrations/openvino.md
+              - PaddlePaddle: integrations/paddlepaddle.md
+              - MNN: integrations/mnn.md
+              - NCNN: integrations/ncnn.md
+              - Paperspace Gradient: integrations/paperspace.md
+              - Ray Tune: integrations/ray-tune.md
+              - Roboflow: integrations/roboflow.md
+              - TF GraphDef: integrations/tf-graphdef.md
+              - TF SavedModel: integrations/tf-savedmodel.md
+              - TF.js: integrations/tfjs.md
+              - TFLite: integrations/tflite.md
+              - TFLite Edge TPU: integrations/edge-tpu.md
+              - TensorBoard: integrations/tensorboard.md
+              - TensorRT: integrations/tensorrt.md
+              - TorchScript: integrations/torchscript.md
+              - VS Code: integrations/vscode.md
+              - Weights & Biases: integrations/weights-biases.md
+              - Albumentations: integrations/albumentations.md
+              - SONY IMX500: integrations/sony-imx500.md
+              - Rockchip RKNN: integrations/rockchip-rknn.md
+              - Seeed Studio reCamera: integrations/seeedstudio-recamera.md
+          - HUB:
+              - hub/index.md
+              - 网页:
+                  - hub/index.md
+                  - 快速入门: hub/quickstart.md
+                  - 数据集: hub/datasets.md
+                  - 项目: hub/projects.md
+                  - 模型: hub/models.md
+                  - 专业版: hub/pro.md
+                  - 云训练: hub/cloud-training.md
+                  - 推理API: hub/inference-api.md
+                  - 团队: hub/teams.md
+                  - 集成: hub/integrations.md
+              - 应用:
+                  - hub/app/index.md
+                  - iOS: hub/app/ios.md
+                  - Android: hub/app/android.md
+              - Python SDK:
+                  - hub/sdk/index.md
+                  - 快速入门: hub/sdk/quickstart.md
+                  - 模型: hub/sdk/model.md
+                  - 数据集: hub/sdk/dataset.md
+                  - 项目: hub/sdk/project.md
+                  - 参考:
+                      - base:
+                          - api_client: hub/sdk/reference/base/api_client.md
+                          - auth: hub/sdk/reference/base/auth.md
+                          - crud_client: hub/sdk/reference/base/crud_client.md
+                          - paginated_list: hub/sdk/reference/base/paginated_list.md
+                          - server_clients: hub/sdk/reference/base/server_clients.md
+                      - helpers:
+                          - error_handler: hub/sdk/reference/helpers/error_handler.md
+                          - exceptions: hub/sdk/reference/helpers/exceptions.md
+                          - logger: hub/sdk/reference/helpers/logger.md
+                          - utils: hub/sdk/reference/helpers/utils.md
+                      - hub_client: hub/sdk/reference/hub_client.md
+                      - modules:
+                          - datasets: hub/sdk/reference/modules/datasets.md
+                          - models: hub/sdk/reference/modules/models.md
+                          - projects: hub/sdk/reference/modules/projects.md
+                          - teams: hub/sdk/reference/modules/teams.md
+                          - users: hub/sdk/reference/modules/users.md
+              - REST API:
+                  - hub/api/index.md
 
-  - Reference:
-      - cfg:
-          - __init__: reference/cfg/__init__.md
-      - data:
-          - annotator: reference/data/annotator.md
-          - augment: reference/data/augment.md
-          - base: reference/data/base.md
-          - build: reference/data/build.md
-          - converter: reference/data/converter.md
-          - dataset: reference/data/dataset.md
-          - loaders: reference/data/loaders.md
-          - split_dota: reference/data/split_dota.md
-          - utils: reference/data/utils.md
-      - engine:
-          - exporter: reference/engine/exporter.md
-          - model: reference/engine/model.md
-          - predictor: reference/engine/predictor.md
-          - results: reference/engine/results.md
-          - trainer: reference/engine/trainer.md
-          - tuner: reference/engine/tuner.md
-          - validator: reference/engine/validator.md
-      - hub:
-          - __init__: reference/hub/__init__.md
-          - auth: reference/hub/auth.md
-          - google:
-              - __init__: reference/hub/google/__init__.md
-          - session: reference/hub/session.md
-          - utils: reference/hub/utils.md
-      - models:
-          - fastsam:
-              - model: reference/models/fastsam/model.md
-              - predict: reference/models/fastsam/predict.md
-              - utils: reference/models/fastsam/utils.md
-              - val: reference/models/fastsam/val.md
-          - nas:
-              - model: reference/models/nas/model.md
-              - predict: reference/models/nas/predict.md
-              - val: reference/models/nas/val.md
-          - rtdetr:
-              - model: reference/models/rtdetr/model.md
-              - predict: reference/models/rtdetr/predict.md
-              - train: reference/models/rtdetr/train.md
-              - val: reference/models/rtdetr/val.md
-          - sam:
-              - amg: reference/models/sam/amg.md
-              - build: reference/models/sam/build.md
-              - model: reference/models/sam/model.md
-              - modules:
-                  - blocks: reference/models/sam/modules/blocks.md
-                  - decoders: reference/models/sam/modules/decoders.md
-                  - encoders: reference/models/sam/modules/encoders.md
-                  - memory_attention: reference/models/sam/modules/memory_attention.md
-                  - sam: reference/models/sam/modules/sam.md
-                  - tiny_encoder: reference/models/sam/modules/tiny_encoder.md
-                  - transformer: reference/models/sam/modules/transformer.md
-                  - utils: reference/models/sam/modules/utils.md
-              - predict: reference/models/sam/predict.md
-          - utils:
-              - loss: reference/models/utils/loss.md
-              - ops: reference/models/utils/ops.md
-          - yolo:
-              - classify:
-                  - predict: reference/models/yolo/classify/predict.md
-                  - train: reference/models/yolo/classify/train.md
-                  - val: reference/models/yolo/classify/val.md
-              - detect:
-                  - predict: reference/models/yolo/detect/predict.md
-                  - train: reference/models/yolo/detect/train.md
-                  - val: reference/models/yolo/detect/val.md
-              - model: reference/models/yolo/model.md
-              - obb:
-                  - predict: reference/models/yolo/obb/predict.md
-                  - train: reference/models/yolo/obb/train.md
-                  - val: reference/models/yolo/obb/val.md
-              - pose:
-                  - predict: reference/models/yolo/pose/predict.md
-                  - train: reference/models/yolo/pose/train.md
-                  - val: reference/models/yolo/pose/val.md
-              - segment:
-                  - predict: reference/models/yolo/segment/predict.md
-                  - train: reference/models/yolo/segment/train.md
-                  - val: reference/models/yolo/segment/val.md
-              - world:
-                  - train: reference/models/yolo/world/train.md
-                  - train_world: reference/models/yolo/world/train_world.md
-              - yoloe:
-                  - predict: reference/models/yolo/yoloe/predict.md
-                  - train: reference/models/yolo/yoloe/train.md
-                  - train_seg: reference/models/yolo/yoloe/train_seg.md
-                  - val: reference/models/yolo/yoloe/val.md
-      - nn:
-          - autobackend: reference/nn/autobackend.md
-          - modules:
-              - activation: reference/nn/modules/activation.md
-              - block: reference/nn/modules/block.md
-              - conv: reference/nn/modules/conv.md
-              - head: reference/nn/modules/head.md
-              - transformer: reference/nn/modules/transformer.md
-              - utils: reference/nn/modules/utils.md
-          - tasks: reference/nn/tasks.md
-          - text_model: reference/nn/text_model.md
-      - solutions:
-          - ai_gym: reference/solutions/ai_gym.md
-          - analytics: reference/solutions/analytics.md
-          - distance_calculation: reference/solutions/distance_calculation.md
-          - heatmap: reference/solutions/heatmap.md
-          - instance_segmentation: reference/solutions/instance_segmentation.md
-          - object_blurrer: reference/solutions/object_blurrer.md
-          - object_counter: reference/solutions/object_counter.md
-          - object_cropper: reference/solutions/object_cropper.md
-          - parking_management: reference/solutions/parking_management.md
-          - queue_management: reference/solutions/queue_management.md
-          - region_counter: reference/solutions/region_counter.md
-          - security_alarm: reference/solutions/security_alarm.md
-          - solutions: reference/solutions/solutions.md
-          - speed_estimation: reference/solutions/speed_estimation.md
-          - streamlit_inference: reference/solutions/streamlit_inference.md
-          - trackzone: reference/solutions/trackzone.md
-          - vision_eye: reference/solutions/vision_eye.md
-      - trackers:
-          - basetrack: reference/trackers/basetrack.md
-          - bot_sort: reference/trackers/bot_sort.md
-          - byte_tracker: reference/trackers/byte_tracker.md
-          - track: reference/trackers/track.md
-          - utils:
-              - gmc: reference/trackers/utils/gmc.md
-              - kalman_filter: reference/trackers/utils/kalman_filter.md
-              - matching: reference/trackers/utils/matching.md
-      - utils:
-          - __init__: reference/utils/__init__.md
-          - autobatch: reference/utils/autobatch.md
-          - benchmarks: reference/utils/benchmarks.md
-          - callbacks:
-              - base: reference/utils/callbacks/base.md
-              - clearml: reference/utils/callbacks/clearml.md
-              - comet: reference/utils/callbacks/comet.md
-              - dvc: reference/utils/callbacks/dvc.md
-              - hub: reference/utils/callbacks/hub.md
-              - mlflow: reference/utils/callbacks/mlflow.md
-              - neptune: reference/utils/callbacks/neptune.md
-              - raytune: reference/utils/callbacks/raytune.md
-              - tensorboard: reference/utils/callbacks/tensorboard.md
-              - wb: reference/utils/callbacks/wb.md
-          - checks: reference/utils/checks.md
-          - dist: reference/utils/dist.md
-          - downloads: reference/utils/downloads.md
-          - errors: reference/utils/errors.md
-          - files: reference/utils/files.md
-          - instance: reference/utils/instance.md
-          - loss: reference/utils/loss.md
-          - metrics: reference/utils/metrics.md
-          - ops: reference/utils/ops.md
-          - patches: reference/utils/patches.md
-          - plotting: reference/utils/plotting.md
-          - tal: reference/utils/tal.md
-          - torch_utils: reference/utils/torch_utils.md
-          - triton: reference/utils/triton.md
-          - tuner: reference/utils/tuner.md
+          - 参考:
+              - cfg:
+                  - __init__: reference/cfg/__init__.md
+              - data:
+                  - annotator: reference/data/annotator.md
+                  - augment: reference/data/augment.md
+                  - base: reference/data/base.md
+                  - build: reference/data/build.md
+                  - converter: reference/data/converter.md
+                  - dataset: reference/data/dataset.md
+                  - loaders: reference/data/loaders.md
+                  - split_dota: reference/data/split_dota.md
+                  - utils: reference/data/utils.md
+              - engine:
+                  - exporter: reference/engine/exporter.md
+                  - model: reference/engine/model.md
+                  - predictor: reference/engine/predictor.md
+                  - results: reference/engine/results.md
+                  - trainer: reference/engine/trainer.md
+                  - tuner: reference/engine/tuner.md
+                  - validator: reference/engine/validator.md
+              - hub:
+                  - __init__: reference/hub/__init__.md
+                  - auth: reference/hub/auth.md
+                  - google:
+                      - __init__: reference/hub/google/__init__.md
+                  - session: reference/hub/session.md
+                  - utils: reference/hub/utils.md
+              - models:
+                  - fastsam:
+                      - model: reference/models/fastsam/model.md
+                      - predict: reference/models/fastsam/predict.md
+                      - utils: reference/models/fastsam/utils.md
+                      - val: reference/models/fastsam/val.md
+                  - nas:
+                      - model: reference/models/nas/model.md
+                      - predict: reference/models/nas/predict.md
+                      - val: reference/models/nas/val.md
+                  - rtdetr:
+                      - model: reference/models/rtdetr/model.md
+                      - predict: reference/models/rtdetr/predict.md
+                      - train: reference/models/rtdetr/train.md
+                      - val: reference/models/rtdetr/val.md
+                  - sam:
+                      - amg: reference/models/sam/amg.md
+                      - build: reference/models/sam/build.md
+                      - model: reference/models/sam/model.md
+                      - modules:
+                          - blocks: reference/models/sam/modules/blocks.md
+                          - decoders: reference/models/sam/modules/decoders.md
+                          - encoders: reference/models/sam/modules/encoders.md
+                          - memory_attention: reference/models/sam/modules/memory_attention.md
+                          - sam: reference/models/sam/modules/sam.md
+                          - tiny_encoder: reference/models/sam/modules/tiny_encoder.md
+                          - transformer: reference/models/sam/modules/transformer.md
+                          - utils: reference/models/sam/modules/utils.md
+                      - predict: reference/models/sam/predict.md
+                  - utils:
+                      - loss: reference/models/utils/loss.md
+                      - ops: reference/models/utils/ops.md
+                  - yolo:
+                      - classify:
+                          - predict: reference/models/yolo/classify/predict.md
+                          - train: reference/models/yolo/classify/train.md
+                          - val: reference/models/yolo/classify/val.md
+                      - detect:
+                          - predict: reference/models/yolo/detect/predict.md
+                          - train: reference/models/yolo/detect/train.md
+                          - val: reference/models/yolo/detect/val.md
+                      - model: reference/models/yolo/model.md
+                      - obb:
+                          - predict: reference/models/yolo/obb/predict.md
+                          - train: reference/models/yolo/obb/train.md
+                          - val: reference/models/yolo/obb/val.md
+                      - pose:
+                          - predict: reference/models/yolo/pose/predict.md
+                          - train: reference/models/yolo/pose/train.md
+                          - val: reference/models/yolo/pose/val.md
+                      - segment:
+                          - predict: reference/models/yolo/segment/predict.md
+                          - train: reference/models/yolo/segment/train.md
+                          - val: reference/models/yolo/segment/val.md
+                      - world:
+                          - train: reference/models/yolo/world/train.md
+                          - train_world: reference/models/yolo/world/train_world.md
+                      - yoloe:
+                          - predict: reference/models/yolo/yoloe/predict.md
+                          - train: reference/models/yolo/yoloe/train.md
+                          - train_seg: reference/models/yolo/yoloe/train_seg.md
+                          - val: reference/models/yolo/yoloe/val.md
+              - nn:
+                  - autobackend: reference/nn/autobackend.md
+                  - modules:
+                      - activation: reference/nn/modules/activation.md
+                      - block: reference/nn/modules/block.md
+                      - conv: reference/nn/modules/conv.md
+                      - head: reference/nn/modules/head.md
+                      - transformer: reference/nn/modules/transformer.md
+                      - utils: reference/nn/modules/utils.md
+                  - tasks: reference/nn/tasks.md
+                  - text_model: reference/nn/text_model.md
+              - solutions:
+                  - ai_gym: reference/solutions/ai_gym.md
+                  - analytics: reference/solutions/analytics.md
+                  - distance_calculation: reference/solutions/distance_calculation.md
+                  - heatmap: reference/solutions/heatmap.md
+                  - instance_segmentation: reference/solutions/instance_segmentation.md
+                  - object_blurrer: reference/solutions/object_blurrer.md
+                  - object_counter: reference/solutions/object_counter.md
+                  - object_cropper: reference/solutions/object_cropper.md
+                  - parking_management: reference/solutions/parking_management.md
+                  - queue_management: reference/solutions/queue_management.md
+                  - region_counter: reference/solutions/region_counter.md
+                  - security_alarm: reference/solutions/security_alarm.md
+                  - solutions: reference/solutions/solutions.md
+                  - speed_estimation: reference/solutions/speed_estimation.md
+                  - streamlit_inference: reference/solutions/streamlit_inference.md
+                  - trackzone: reference/solutions/trackzone.md
+                  - vision_eye: reference/solutions/vision_eye.md
+              - trackers:
+                  - basetrack: reference/trackers/basetrack.md
+                  - bot_sort: reference/trackers/bot_sort.md
+                  - byte_tracker: reference/trackers/byte_tracker.md
+                  - track: reference/trackers/track.md
+                  - utils:
+                      - gmc: reference/trackers/utils/gmc.md
+                      - kalman_filter: reference/trackers/utils/kalman_filter.md
+                      - matching: reference/trackers/utils/matching.md
+              - utils:
+                  - __init__: reference/utils/__init__.md
+                  - autobatch: reference/utils/autobatch.md
+                  - benchmarks: reference/utils/benchmarks.md
+                  - callbacks:
+                      - base: reference/utils/callbacks/base.md
+                      - clearml: reference/utils/callbacks/clearml.md
+                      - comet: reference/utils/callbacks/comet.md
+                      - dvc: reference/utils/callbacks/dvc.md
+                      - hub: reference/utils/callbacks/hub.md
+                      - mlflow: reference/utils/callbacks/mlflow.md
+                      - neptune: reference/utils/callbacks/neptune.md
+                      - raytune: reference/utils/callbacks/raytune.md
+                      - tensorboard: reference/utils/callbacks/tensorboard.md
+                      - wb: reference/utils/callbacks/wb.md
+                  - checks: reference/utils/checks.md
+                  - dist: reference/utils/dist.md
+                  - downloads: reference/utils/downloads.md
+                  - errors: reference/utils/errors.md
+                  - files: reference/utils/files.md
+                  - instance: reference/utils/instance.md
+                  - loss: reference/utils/loss.md
+                  - metrics: reference/utils/metrics.md
+                  - ops: reference/utils/ops.md
+                  - patches: reference/utils/patches.md
+                  - plotting: reference/utils/plotting.md
+                  - tal: reference/utils/tal.md
+                  - torch_utils: reference/utils/torch_utils.md
+                  - triton: reference/utils/triton.md
+                  - tuner: reference/utils/tuner.md
 
-  - Help:
-      - Help: help/index.md
-      - Frequently Asked Questions (FAQ): help/FAQ.md
-      - Contributing Guide: help/contributing.md
-      - Continuous Integration (CI) Guide: help/CI.md
-      - Contributor License Agreement (CLA): help/CLA.md
-      - Minimum Reproducible Example (MRE) Guide: help/minimum-reproducible-example.md
-      - Code of Conduct: help/code-of-conduct.md
-      - Environmental, Health and Safety (EHS) Policy: help/environmental-health-safety.md
-      - Security Policy: help/security.md
-      - Privacy Policy: help/privacy.md
+          - 帮助:
+              - 帮助: help/index.md
+              - 常见问题(FAQ): help/FAQ.md
+              - 贡献指南: help/contributing.md
+              - 持续集成(CI)指南: help/CI.md
+              - 贡献者许可协议(CLA): help/CLA.md
+              - 最小可重现示例(MRE)指南: help/minimum-reproducible-example.md
+              - 行为准则: help/code-of-conduct.md
+              - 环境、健康和安全(EHS)政策: help/environmental-health-safety.md
+              - 安全政策: help/security.md
+              - 隐私政策: help/privacy.md
 
 # Plugins including 301 redirects navigation ---------------------------------------------------------------------------
 plugins:
