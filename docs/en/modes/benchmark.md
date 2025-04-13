@@ -12,7 +12,7 @@ keywords: model benchmarking, YOLO11, Ultralytics, performance evaluation, expor
 
 !!! tip "刷新浏览器"
 
-由于可能存在 cookie 问题，您可能需要刷新页面才能正确查看图表。
+    由于可能存在 cookie 问题，您可能需要刷新页面才能正确查看图表。
 
 <script async src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script defer src="../../javascript/benchmark.js"></script>
@@ -65,7 +65,7 @@ keywords: model benchmarking, YOLO11, Ultralytics, performance evaluation, expor
 
 !!! 示例
 
-=== "Python"
+    === "Python"
 
         ```python
         from ultralytics.utils.benchmarks import benchmark
@@ -77,7 +77,7 @@ keywords: model benchmarking, YOLO11, Ultralytics, performance evaluation, expor
         benchmark(model="yolo11n.pt", data="coco8.yaml", imgsz=640, format="onnx")
         ```
 
-=== "命令行界面"
+    === "CLI"
 
         ```bash
         yolo benchmark model=yolo11n.pt data='coco8.yaml' imgsz=640 half=False device=0
@@ -126,7 +126,7 @@ Ultralytics YOLO11提供了一种基准测试模式，用于评估您的模型�
         benchmark(model="yolo11n.pt", data="coco8.yaml", imgsz=640, half=False, device=0)
         ```
 
-=== "命令行界面"
+    === "CLI"
 
         ```bash
         yolo benchmark model=yolo11n.pt data='coco8.yaml' imgsz=640 half=False device=0
