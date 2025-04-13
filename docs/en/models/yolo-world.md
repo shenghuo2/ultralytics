@@ -1,71 +1,71 @@
 ---
 comments: true
-description: Explore the YOLO-World Model for efficient, real-time open-vocabulary object detection using Ultralytics YOLOv8 advancements. Achieve top performance with minimal computation.
-keywords: YOLO-World, Ultralytics, open-vocabulary detection, YOLOv8, real-time object detection, machine learning, computer vision, AI, deep learning, model training
+description: 探索基于Ultralytics YOLOv8技术构建的YOLO-World模型，实现高效实时的开放词汇目标检测。以最小计算成本达成卓越性能。
+keywords: YOLO-World, Ultralytics, 开放词汇检测, YOLOv8, 实时目标检测, 机器学习, 计算机视觉, 人工智能, 深度学习, 模型训练
 ---
 
-# YOLO-World Model
+# YOLO-World模型
 
-The YOLO-World Model introduces an advanced, real-time [Ultralytics](https://www.ultralytics.com/) [YOLOv8](yolov8.md)-based approach for Open-Vocabulary Detection tasks. This innovation enables the detection of any object within an image based on descriptive texts. By significantly lowering computational demands while preserving competitive performance, YOLO-World emerges as a versatile tool for numerous vision-based applications.
+YOLO-World模型提出了一种基于[Ultralytics](https://www.ultralytics.com/) [YOLOv8](yolov8.md)的先进实时开放词汇检测方案。这项创新技术能够根据描述性文本检测图像中的任意对象。在保持竞争力的性能同时大幅降低计算需求，使其成为众多视觉应用的通用工具。
 
 <p align="center">
   <br>
   <iframe loading="lazy" width="720" height="405" src="https://www.youtube.com/embed/cfTKj96TjSE"
-    title="YouTube video player" frameborder="0"
+    title="YouTube视频播放器" frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     allowfullscreen>
   </iframe>
   <br>
-  <strong>Watch:</strong> YOLO World training workflow on custom dataset
+  <strong>观看:</strong> 在自定义数据集上的YOLO-World训练流程
 </p>
 
-![YOLO-World Model architecture overview](https://github.com/ultralytics/docs/releases/download/0/yolo-world-model-architecture-overview.avif)
+![YOLO-World模型架构概览](https://github.com/ultralytics/docs/releases/download/0/yolo-world-model-architecture-overview.avif)
 
-## Overview
+## 概述
 
-YOLO-World tackles the challenges faced by traditional Open-Vocabulary detection models, which often rely on cumbersome [Transformer](https://www.ultralytics.com/glossary/transformer) models requiring extensive computational resources. These models' dependence on pre-defined object categories also restricts their utility in dynamic scenarios. YOLO-World revitalizes the YOLOv8 framework with open-vocabulary detection capabilities, employing vision-[language modeling](https://www.ultralytics.com/glossary/language-modeling) and pre-training on expansive datasets to excel at identifying a broad array of objects in zero-shot scenarios with unmatched efficiency.
+传统开放词汇检测模型常依赖计算密集型[Transformer](https://www.ultralytics.com/glossary/transformer)架构，且受限于预定义类别体系。YOLO-World通过融合视觉-[语言建模](https://www.ultralytics.com/glossary/language-modeling)技术，在大规模数据集上预训练，赋予YOLOv8框架开放词汇检测能力，在零样本场景中以惊人效率识别海量对象。
 
-## Key Features
+## 核心优势
 
-1. **Real-time Solution:** Harnessing the computational speed of CNNs, YOLO-World delivers a swift open-vocabulary detection solution, catering to industries in need of immediate results.
+1. **实时性能：** 利用CNN的计算速度优势，为需要即时结果的行业提供高速开放词汇检测方案
 
-2. **Efficiency and Performance:** YOLO-World slashes computational and resource requirements without sacrificing performance, offering a robust alternative to models like SAM but at a fraction of the computational cost, enabling real-time applications.
+2. **高效能表现：** 在保持性能的同时大幅降低计算资源需求，相比SAM等模型仅需极小计算成本即可实现实时应用
 
-3. **Inference with Offline Vocabulary:** YOLO-World introduces a "prompt-then-detect" strategy, employing an offline vocabulary to enhance efficiency further. This approach enables the use of custom prompts computed apriori, including captions or categories, to be encoded and stored as offline vocabulary embeddings, streamlining the detection process.
+3. **离线词汇推理：** 创新的"先提示后检测"策略，通过预计算的自定义提示词（如描述文本或类别）生成离线词汇嵌入，显著优化检测流程
 
-4. **Powered by YOLOv8:** Built upon [Ultralytics YOLOv8](yolov8.md), YOLO-World leverages the latest advancements in real-time object detection to facilitate open-vocabulary detection with unparalleled accuracy and speed.
+4. **YOLOv8赋能：** 基于[Ultralytics YOLOv8](yolov8.md)构建，集合实时检测领域最新突破，提供无与伦比的准确率和速度
 
-5. **Benchmark Excellence:** YOLO-World outperforms existing open-vocabulary detectors, including MDETR and GLIP series, in terms of speed and efficiency on standard benchmarks, showcasing YOLOv8's superior capability on a single NVIDIA V100 GPU.
+5. **基准测试领先：** 在标准测试中，速度与效率全面超越MDETR和GLIP系列等现有开放词汇检测器，单块NVIDIA V100GPU即展现卓越性能
 
-6. **Versatile Applications:** YOLO-World's innovative approach unlocks new possibilities for a multitude of vision tasks, delivering speed improvements by orders of magnitude over existing methods.
+6. **多场景应用：** 创新方法为各类视觉任务开辟新可能，速度较现有方法提升数个数量级
 
-## Available Models, Supported Tasks, and Operating Modes
+## 可用模型、支持任务与运行模式
 
-This section details the models available with their specific pre-trained weights, the tasks they support, and their compatibility with various operating modes such as [Inference](../modes/predict.md), [Validation](../modes/val.md), [Training](../modes/train.md), and [Export](../modes/export.md), denoted by ✅ for supported modes and ❌ for unsupported modes.
+下表详细列出各预训练模型参数、支持任务类型及其与[推理](../modes/predict.md)、[验证](../modes/val.md)、[训练](../modes/train.md)、[导出](../modes/export.md)等运行模式的兼容性（✅表示支持，❌表示不支持）。
 
 !!! note
 
-    All the YOLOv8-World weights have been directly migrated from the official [YOLO-World](https://github.com/AILab-CVC/YOLO-World) repository, highlighting their excellent contributions.
+    所有YOLOv8-World权重均迁移自官方[YOLO-World](https://github.com/AILab-CVC/YOLO-World)仓库，我们对其卓越贡献表示认可。
 
-| Model Type      | Pre-trained Weights                                                                                     | Tasks Supported                        | Inference | Validation | Training | Export |
-| --------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------- | --------- | ---------- | -------- | ------ |
-| YOLOv8s-world   | [yolov8s-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s-world.pt)     | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ❌     |
-| YOLOv8s-worldv2 | [yolov8s-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s-worldv2.pt) | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ✅     |
-| YOLOv8m-world   | [yolov8m-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8m-world.pt)     | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ❌     |
-| YOLOv8m-worldv2 | [yolov8m-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8m-worldv2.pt) | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ✅     |
-| YOLOv8l-world   | [yolov8l-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8l-world.pt)     | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ❌     |
-| YOLOv8l-worldv2 | [yolov8l-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8l-worldv2.pt) | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ✅     |
-| YOLOv8x-world   | [yolov8x-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8x-world.pt)     | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ❌     |
-| YOLOv8x-worldv2 | [yolov8x-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8x-worldv2.pt) | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ✅     |
+| 模型类型       | 预训练权重                                                                                             | 支持任务                           | 推理 | 验证 | 训练 | 导出 |
+| -------------- | ----------------------------------------------------------------------------------------------------- | --------------------------------- | ---- | ---- | ---- | ---- |
+| YOLOv8s-world   | [yolov8s-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s-world.pt)   | [目标检测](../tasks/detect.md)    | ✅   | ✅   | ✅   | ❌   |
+| YOLOv8s-worldv2 | [yolov8s-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s-worldv2.pt) | [目标检测](../tasks/detect.md)    | ✅   | ✅   | ✅   | ✅   |
+| YOLOv8m-world   | [yolov8m-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8m-world.pt)   | [目标检测](../tasks/detect.md)    | ✅   | ✅   | ✅   | ❌   |
+| YOLOv8m-worldv2 | [yolov8m-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8m-worldv2.pt) | [目标检测](../tasks/detect.md)    | ✅   | ✅   | ✅   | ✅   |
+| YOLOv8l-world   | [yolov8l-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8l-world.pt)   | [目标检测](../tasks/detect.md)    | ✅   | ✅   | ✅   | ❌   |
+| YOLOv8l-worldv2 | [yolov8l-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8l-worldv2.pt) | [目标检测](../tasks/detect.md)    | ✅   | ✅   | ✅   | ✅   |
+| YOLOv8x-world   | [yolov8x-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8x-world.pt)   | [目标检测](../tasks/detect.md)    | ✅   | ✅   | ✅   | ❌   |
+| YOLOv8x-worldv2 | [yolov8x-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8x-worldv2.pt) | [目标检测](../tasks/detect.md)    | ✅   | ✅   | ✅   | ✅   |
 
-## Zero-shot Transfer on COCO Dataset
+## COCO数据集零样本迁移表现
 
-!!! tip "Performance"
+!!! tip "性能指标"
 
-    === "Detection (COCO)"
+    === "检测(COCO)"
 
-        | Model Type      | mAP  | mAP50 | mAP75 |
-        | --------------- | ---- | ----- | ----- |
+        | 模型类型       | mAP  | mAP50 | mAP75 |
+        | -------------- | ---- | ----- | ----- |
         | yolov8s-world   | 37.4 | 52.0  | 40.6  |
         | yolov8s-worldv2 | 37.7 | 52.2  | 41.0  |
         | yolov8m-world   | 42.0 | 57.0  | 45.6  |
@@ -75,47 +75,47 @@ This section details the models available with their specific pre-trained weight
         | yolov8x-world   | 47.0 | 63.0  | 51.2  |
         | yolov8x-worldv2 | 47.1 | 62.8  | 51.4  |
 
-## Usage Examples
+## 使用示例
 
-The YOLO-World models are easy to integrate into your Python applications. Ultralytics provides user-friendly [Python API](../usage/python.md) and [CLI commands](../usage/cli.md) to streamline development.
+YOLO-World模型可轻松集成到Python应用中。Ultralytics提供友好的[Python API](../usage/python.md)和[CLI命令](../usage/cli.md)简化开发流程。
 
-### Train Usage
+### 训练使用
 
 !!! tip
 
-    We strongly recommend to use `yolov8-worldv2` model for custom training, because it supports deterministic training and also easy to export other formats i.e onnx/tensorrt.
+    强烈推荐使用`yolov8-worldv2`模型进行自定义训练，因其支持确定性训练并可轻松导出onnx/tensorrt等格式。
 
-[Object detection](https://www.ultralytics.com/glossary/object-detection) is straightforward with the `train` method, as illustrated below:
+通过`train`方法进行[目标检测](https://www.ultralytics.com/glossary/object-detection)训练示例如下：
 
 !!! example
 
     === "Python"
 
-        [PyTorch](https://www.ultralytics.com/glossary/pytorch) pretrained `*.pt` models as well as configuration `*.yaml` files can be passed to the `YOLOWorld()` class to create a model instance in python:
+        可将[PyTorch](https://www.ultralytics.com/glossary/pytorch)预训练的`*.pt`模型及配置文件`*.yaml`传递给`YOLOWorld()`类创建实例:
 
         ```python
         from ultralytics import YOLOWorld
 
-        # Load a pretrained YOLOv8s-worldv2 model
+        # 加载预训练YOLOv8s-worldv2模型
         model = YOLOWorld("yolov8s-worldv2.pt")
 
-        # Train the model on the COCO8 example dataset for 100 epochs
+        # 在COCO8示例数据集上训练100轮次
         results = model.train(data="coco8.yaml", epochs=100, imgsz=640)
 
-        # Run inference with the YOLOv8n model on the 'bus.jpg' image
+        # 使用训练好的模型对'bus.jpg'进行推理
         results = model("path/to/bus.jpg")
         ```
 
     === "CLI"
 
         ```bash
-        # Load a pretrained YOLOv8s-worldv2 model and train it on the COCO8 example dataset for 100 epochs
+        # 加载预训练YOLOv8s-worldv2模型并在COCO8数据集上训练100轮次
         yolo train model=yolov8s-worldv2.yaml data=coco8.yaml epochs=100 imgsz=640
         ```
 
-### Predict Usage
+### 预测使用
 
-Object detection is straightforward with the `predict` method, as illustrated below:
+通过`predict`方法进行目标检测示例如下：
 
 !!! example
 
@@ -124,28 +124,28 @@ Object detection is straightforward with the `predict` method, as illustrated be
         ```python
         from ultralytics import YOLOWorld
 
-        # Initialize a YOLO-World model
-        model = YOLOWorld("yolov8s-world.pt")  # or select yolov8m/l-world.pt for different sizes
+        # 初始化YOLO-World模型
+        model = YOLOWorld("yolov8s-world.pt")  # 可选yolov8m/l-world.pt不同规格
 
-        # Execute inference with the YOLOv8s-world model on the specified image
+        # 对指定图片执行推理
         results = model.predict("path/to/image.jpg")
 
-        # Show results
+        # 显示结果
         results[0].show()
         ```
 
     === "CLI"
 
         ```bash
-        # Perform object detection using a YOLO-World model
+        # 使用YOLO-World模型进行目标检测
         yolo predict model=yolov8s-world.pt source=path/to/image.jpg imgsz=640
         ```
 
-This snippet demonstrates the simplicity of loading a pre-trained model and running a prediction on an image.
+这段代码展示了加载预训练模型并对图像进行预测的简易过程。
 
-### Val Usage
+### 验证使用
 
-Model validation on a dataset is streamlined as follows:
+模型验证流程如下：
 
 !!! example
 
@@ -154,23 +154,23 @@ Model validation on a dataset is streamlined as follows:
         ```python
         from ultralytics import YOLO
 
-        # Create a YOLO-World model
-        model = YOLO("yolov8s-world.pt")  # or select yolov8m/l-world.pt for different sizes
+        # 创建YOLO-World模型
+        model = YOLO("yolov8s-world.pt")  # 可选yolov8m/l-world.pt不同规格
 
-        # Conduct model validation on the COCO8 example dataset
+        # 在COCO8数据集上验证模型
         metrics = model.val(data="coco8.yaml")
         ```
 
     === "CLI"
 
         ```bash
-        # Validate a YOLO-World model on the COCO8 dataset with a specified image size
+        # 使用指定图像尺寸验证YOLO-World模型
         yolo val model=yolov8s-world.pt data=coco8.yaml imgsz=640
         ```
 
-### Track Usage
+### 追踪使用
 
-[Object tracking](https://www.ultralytics.com/glossary/object-tracking) with YOLO-World model on a video/images is streamlined as follows:
+对视频/图像进行[目标追踪](https://www.ultralytics.com/glossary/object-tracking)示例如下：
 
 !!! example
 
@@ -179,120 +179,120 @@ Model validation on a dataset is streamlined as follows:
         ```python
         from ultralytics import YOLO
 
-        # Create a YOLO-World model
-        model = YOLO("yolov8s-world.pt")  # or select yolov8m/l-world.pt for different sizes
+        # 创建YOLO-World模型
+        model = YOLO("yolov8s-world.pt")  # 可选yolov8m/l-world.pt不同规格
 
-        # Track with a YOLO-World model on a video
+        # 对视频进行目标追踪
         results = model.track(source="path/to/video.mp4")
         ```
 
     === "CLI"
 
         ```bash
-        # Track with a YOLO-World model on the video with a specified image size
+        # 使用指定图像尺寸追踪视频中的目标
         yolo track model=yolov8s-world.pt imgsz=640 source="path/to/video.mp4"
         ```
 
 !!! note
 
-    The YOLO-World models provided by Ultralytics come pre-configured with [COCO dataset](../datasets/detect/coco.md) categories as part of their offline vocabulary, enhancing efficiency for immediate application. This integration allows the YOLOv8-World models to directly recognize and predict the 80 standard categories defined in the COCO dataset without requiring additional setup or customization.
+    Ultralytics提供的YOLO-World模型预置了[COCO数据集](../datasets/detect/coco.md)80个标准类别作为离线词汇，无需额外配置即可直接识别这些常见对象。
 
-### Set prompts
+### 设置提示词
 
-![YOLO-World prompt class names overview](https://github.com/ultralytics/docs/releases/download/0/yolo-world-prompt-class-names-overview.avif)
+![YOLO-World提示词类别名称概览](https://github.com/ultralytics/docs/releases/download/0/yolo-world-prompt-class-names-overview.avif)
 
-The YOLO-World framework allows for the dynamic specification of classes through custom prompts, empowering users to tailor the model to their specific needs **without retraining**. This feature is particularly useful for adapting the model to new domains or specific tasks that were not originally part of the [training data](https://www.ultralytics.com/glossary/training-data). By setting custom prompts, users can essentially guide the model's focus towards objects of interest, enhancing the relevance and [accuracy](https://www.ultralytics.com/glossary/accuracy) of the detection results.
+YOLO-World框架支持通过自定义提示词动态指定类别，使用户能够在不重新训练的情况下，将模型定制至特定需求。这一特性尤其适用于将模型调整至原本不在[训练数据](https://www.ultralytics.com/glossary/training-data)范围内的新领域或特定任务。通过设置自定义提示词，用户能有效引导模型关注目标对象，从而提升检测结果的针对性和[准确度](https://www.ultralytics.com/glossary/accuracy)。
 
-For instance, if your application only requires detecting 'person' and 'bus' objects, you can specify these classes directly:
+例如，若您的应用只需检测"人"和"公交车"两类对象，可直接指定这些类别：
 
 !!! example
 
-    === "Custom Inference Prompts"
+    === "自定义推理提示"
 
         ```python
         from ultralytics import YOLO
 
-        # Initialize a YOLO-World model
-        model = YOLO("yolov8s-world.pt")  # or choose yolov8m/l-world.pt
+        # 初始化YOLO-World模型
+        model = YOLO("yolov8s-world.pt")  # 可选yolov8m/l-world.pt
 
-        # Define custom classes
-        model.set_classes(["person", "bus"])
+        # 定义自定义类别
+        model.set_classes(["人物", "公交车"])
 
-        # Execute prediction for specified categories on an image
+        # 对指定类别执行图像推理
         results = model.predict("path/to/image.jpg")
 
-        # Show results
+        # 显示结果
         results[0].show()
         ```
 
-You can also save a model after setting custom classes. By doing this you create a version of the YOLO-World model that is specialized for your specific use case. This process embeds your custom class definitions directly into the model file, making the model ready to use with your specified classes without further adjustments. Follow these steps to save and load your custom YOLOv8 model:
+设置自定义类别后可保存模型，创建专用于特定场景的版本：
 
 !!! example
 
-    === "Persisting Models with Custom Vocabulary"
+    === "持久化自定义词汇模型"
 
-        First load a YOLO-World model, set custom classes for it and save it:
+        先加载模型并设置自定义类别后保存：
 
         ```python
         from ultralytics import YOLO
 
-        # Initialize a YOLO-World model
-        model = YOLO("yolov8s-world.pt")  # or select yolov8m/l-world.pt
+        # 初始化YOLO-World模型
+        model = YOLO("yolov8s-world.pt")  # 可选yolov8m/l-world.pt
 
-        # Define custom classes
-        model.set_classes(["person", "bus"])
+        # 定义自定义类别
+        model.set_classes(["人物", "公交车"])
 
-        # Save the model with the defined offline vocabulary
+        # 保存含自定义词汇的模型
         model.save("custom_yolov8s.pt")
         ```
 
-        After saving, the custom_yolov8s.pt model behaves like any other pre-trained YOLOv8 model but with a key difference: it is now optimized to detect only the classes you have defined. This customization can significantly improve detection performance and efficiency for your specific application scenarios.
+        保存后的模型即成为专注检测特定类别的专用模型：
 
         ```python
         from ultralytics import YOLO
 
-        # Load your custom model
+        # 加载自定义模型
         model = YOLO("custom_yolov8s.pt")
 
-        # Run inference to detect your custom classes
+        # 执行自定义类别检测
         results = model.predict("path/to/image.jpg")
 
-        # Show results
+        # 显示结果
         results[0].show()
         ```
 
-### Benefits of Saving with Custom Vocabulary
+### 保存自定义词汇模型的优势
 
-- **Efficiency**: Streamlines the detection process by focusing on relevant objects, reducing computational overhead and speeding up inference.
-- **Flexibility**: Allows for easy adaptation of the model to new or niche detection tasks without the need for extensive retraining or data collection.
-- **Simplicity**: Simplifies deployment by eliminating the need to repeatedly specify custom classes at runtime, making the model directly usable with its embedded vocabulary.
-- **Performance**: Enhances detection accuracy for specified classes by focusing the model's attention and resources on recognizing the defined objects.
+- **高效性**：专注相关对象检测，减少计算开销
+- **灵活性**：快速适配新领域检测任务，无需大量数据收集
+- **简便性**：消除运行时重复指定类别的需求
+- **精准度**：通过聚焦特定对象提升检测准确性
 
-This approach provides a powerful means of customizing state-of-the-art [object detection](../tasks/detect.md) models for specific tasks, making advanced AI more accessible and applicable to a broader range of practical applications.
+这种方法为定制最先进的[目标检测](../tasks/detect.md)模型以适应特定任务提供了强有力的手段，使得先进的人工智能技术更易于获取，并适用于更广泛的实际应用领域。
 
-## Reproduce official results from scratch(Experimental)
+## 从零复现官方结果(实验性)
 
-### Prepare datasets
+### 准备数据集
 
-- Train data
+- 训练数据
 
-| Dataset                                                           | Type                                                        | Samples | Boxes | Annotation Files                                                                                                                           |
-| ----------------------------------------------------------------- | ----------------------------------------------------------- | ------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Objects365v1](https://opendatalab.com/OpenDataLab/Objects365_v1) | Detection                                                   | 609k    | 9621k | [objects365_train.json](https://opendatalab.com/OpenDataLab/Objects365_v1)                                                                 |
-| [GQA](https://downloads.cs.stanford.edu/nlp/data/gqa/images.zip)  | [Grounding](https://www.ultralytics.com/glossary/grounding) | 621k    | 3681k | [final_mixed_train_no_coco.json](https://huggingface.co/GLIPModel/GLIP/blob/main/mdetr_annotations/final_mixed_train_no_coco.json)         |
-| [Flickr30k](https://shannon.cs.illinois.edu/DenotationGraph/)     | Grounding                                                   | 149k    | 641k  | [final_flickr_separateGT_train.json](https://huggingface.co/GLIPModel/GLIP/blob/main/mdetr_annotations/final_flickr_separateGT_train.json) |
+| 数据集                                                           | 类型                                                        | 样本数 | 标注框数 | 标注文件                                                                                                                           |
+| ----------------------------------------------------------------- | ----------------------------------------------------------- | ------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [Objects365v1](https://opendatalab.com/OpenDataLab/Objects365_v1) | 检测                                                        | 609k   | 9621k    | [objects365_train.json](https://opendatalab.com/OpenDataLab/Objects365_v1)                                                         |
+| [GQA](https://downloads.cs.stanford.edu/nlp/data/gqa/images.zip)  | [基础检测](https://www.ultralytics.com/glossary/grounding)  | 621k   | 3681k    | [final_mixed_train_no_coco.json](https://huggingface.co/GLIPModel/GLIP/blob/main/mdetr_annotations/final_mixed_train_no_coco.json) |
+| [Flickr30k](https://shannon.cs.illinois.edu/DenotationGraph/)     | 基础检测                                                    | 149k   | 641k     | [final_flickr_separateGT_train.json](https://huggingface.co/GLIPModel/GLIP/blob/main/mdetr_annotations/final_flickr_separateGT_train.json) |
 
-- Val data
+- 验证数据
 
-| Dataset                                                                                                 | Type      | Annotation Files                                                                                       |
-| ------------------------------------------------------------------------------------------------------- | --------- | ------------------------------------------------------------------------------------------------------ |
-| [LVIS minival](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/datasets/lvis.yaml) | Detection | [minival.txt](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/datasets/lvis.yaml) |
+| 数据集                                                                                                 | 类型      | 标注文件                                                                                       |
+| ------------------------------------------------------------------------------------------------------- | --------- | ---------------------------------------------------------------------------------------------- |
+| [LVIS minival](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/datasets/lvis.yaml) | 检测      | [minival.txt](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/cfg/datasets/lvis.yaml) |
 
-### Launch training from scratch
+### 启动从零训练
 
 !!! note
 
-    `WorldTrainerFromScratch` is highly customized to allow training yolo-world models on both detection datasets and grounding datasets simultaneously. More details please checkout [ultralytics.model.yolo.world.train_world.py](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/models/yolo/world/train_world.py).
+    `WorldTrainerFromScratch`是高度定制化的训练器，支持同时在检测数据集和基础检测数据集上训练yolo-world模型。详情请查看[ultralytics.model.yolo.world.train_world.py](https://github.com/ultralytics/ultralytics/blob/main/ultralytics/models/yolo/world/train_world.py)。
 
 !!! example
 
@@ -322,9 +322,9 @@ This approach provides a powerful means of customizing state-of-the-art [object 
         model.train(data=data, batch=128, epochs=100, trainer=WorldTrainerFromScratch)
         ```
 
-## Citations and Acknowledgements
+## 引用与致谢
 
-We extend our gratitude to the [Tencent AILab Computer Vision Center](https://www.tencent.com/) for their pioneering work in real-time open-vocabulary object detection with YOLO-World:
+我们衷心感谢[腾讯AILab计算机视觉中心](https://www.tencent.com/)在实时开放词汇目标检测领域的开创性工作：
 
 !!! quote ""
 
@@ -339,81 +339,81 @@ We extend our gratitude to the [Tencent AILab Computer Vision Center](https://ww
         }
         ```
 
-For further reading, the original YOLO-World paper is available on [arXiv](https://arxiv.org/pdf/2401.17270v2). The project's source code and additional resources can be accessed via their [GitHub repository](https://github.com/AILab-CVC/YOLO-World). We appreciate their commitment to advancing the field and sharing their valuable insights with the community.
+更多研究细节请参阅[arXiv论文](https://arxiv.org/pdf/2401.17270v2)，项目源码及资源请访问[GitHub仓库](https://github.com/AILab-CVC/YOLO-World)。
 
-## FAQ
+## 常见问题
 
-### What is the YOLO-World model and how does it work?
+### YOLO-World模型是什么？其工作原理是什么？
 
-The YOLO-World model is an advanced, real-time object detection approach based on the [Ultralytics YOLOv8](yolov8.md) framework. It excels in Open-Vocabulary Detection tasks by identifying objects within an image based on descriptive texts. Using vision-language modeling and pre-training on large datasets, YOLO-World achieves high efficiency and performance with significantly reduced computational demands, making it ideal for real-time applications across various industries.
+YOLO-World是基于[Ultralytics YOLOv8](yolov8.md)框架的先进实时目标检测模型，专长于开放词汇检测任务。通过视觉语言建模和大规模预训练，该模型能根据文本描述识别图像中的任意对象，在显著降低计算需求的同时保持卓越性能。
 
-### How does YOLO-World handle inference with custom prompts?
+### YOLO-World如何通过自定义提示进行推理？
 
-YOLO-World supports a "prompt-then-detect" strategy, which utilizes an offline vocabulary to enhance efficiency. Custom prompts like captions or specific object categories are pre-encoded and stored as offline vocabulary [embeddings](https://www.ultralytics.com/glossary/embeddings). This approach streamlines the detection process without the need for retraining. You can dynamically set these prompts within the model to tailor it to specific detection tasks, as shown below:
+YOLO-World采用“先提示后检测”策略，利用离线词汇库提升效率。自定义提示（如图片说明或特定对象类别）会被预先编码并存储为离线词汇库的[嵌入向量](https://www.ultralytics.com/glossary/embeddings)。这种方法无需重新训练即可简化检测流程。您可以通过以下方式动态设置这些提示，以适应特定检测任务：
 
 ```python
 from ultralytics import YOLOWorld
 
-# Initialize a YOLO-World model
+# 初始化YOLO-World模型
 model = YOLOWorld("yolov8s-world.pt")
 
-# Define custom classes
-model.set_classes(["person", "bus"])
+# 定义自定义类别
+model.set_classes(["人物", "公交车"])
 
-# Execute prediction on an image
+# 对图像执行预测
 results = model.predict("path/to/image.jpg")
 
-# Show results
+# 显示结果
 results[0].show()
 ```
 
-### Why should I choose YOLO-World over traditional Open-Vocabulary detection models?
+### 为什么选择YOLO-World而非传统开放词汇检测模型？
 
-YOLO-World provides several advantages over traditional Open-Vocabulary detection models:
+YOLO-World相比传统开放词汇检测模型具备以下优势：
 
-- **Real-Time Performance:** It leverages the computational speed of CNNs to offer quick, efficient detection.
-- **Efficiency and Low Resource Requirement:** YOLO-World maintains high performance while significantly reducing computational and resource demands.
-- **Customizable Prompts:** The model supports dynamic prompt setting, allowing users to specify custom detection classes without retraining.
-- **Benchmark Excellence:** It outperforms other open-vocabulary detectors like MDETR and GLIP in both speed and efficiency on standard benchmarks.
+- **实时性能：** 利用CNN的计算速度，实现快速高效的检测。
+- **高效低资源消耗：** 在保持高性能的同时，显著降低计算和资源需求。
+- **可定制提示：** 支持动态设置提示，用户无需重新训练即可指定自定义检测类别。
+- **基准测试优异：** 在标准测试中，速度和效率均优于MDETR、GLIP等其他开放词汇检测器。
 
-### How do I train a YOLO-World model on my dataset?
+### 如何在自己的数据集上训练YOLO-World模型？
 
-Training a YOLO-World model on your dataset is straightforward through the provided Python API or CLI commands. Here's how to start training using Python:
+通过Python API或CLI命令即可轻松训练。以下是使用Python启动训练的示例：
 
 ```python
 from ultralytics import YOLOWorld
 
-# Load a pretrained YOLOv8s-worldv2 model
+# 加载预训练的YOLOv8s-worldv2模型
 model = YOLOWorld("yolov8s-worldv2.pt")
 
-# Train the model on the COCO8 dataset for 100 epochs
+# 在COCO8数据集上训练100轮次
 results = model.train(data="coco8.yaml", epochs=100, imgsz=640)
 ```
 
-Or using CLI:
+或使用CLI：
 
 ```bash
 yolo train model=yolov8s-worldv2.yaml data=coco8.yaml epochs=100 imgsz=640
 ```
 
-### What are the available pre-trained YOLO-World models and their supported tasks?
+### 有哪些预训练YOLO-World模型及其支持的任务？
 
-Ultralytics offers multiple pre-trained YOLO-World models supporting various tasks and operating modes:
+Ultralytics提供多种预训练模型，支持不同任务和模式：
 
-| Model Type      | Pre-trained Weights                                                                                     | Tasks Supported                        | Inference | Validation | Training | Export |
-| --------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------- | --------- | ---------- | -------- | ------ |
-| YOLOv8s-world   | [yolov8s-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s-world.pt)     | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ❌     |
-| YOLOv8s-worldv2 | [yolov8s-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s-worldv2.pt) | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ✅     |
-| YOLOv8m-world   | [yolov8m-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8m-world.pt)     | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ❌     |
-| YOLOv8m-worldv2 | [yolov8m-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8m-worldv2.pt) | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ✅     |
-| YOLOv8l-world   | [yolov8l-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8l-world.pt)     | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ❌     |
-| YOLOv8l-worldv2 | [yolov8l-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8l-worldv2.pt) | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ✅     |
-| YOLOv8x-world   | [yolov8x-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8x-world.pt)     | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ❌     |
-| YOLOv8x-worldv2 | [yolov8x-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8x-worldv2.pt) | [Object Detection](../tasks/detect.md) | ✅        | ✅         | ✅       | ✅     |
+| 模型类型       | 预训练权重                                                                                               | 支持任务                                | 推理  | 验证  | 训练  | 导出  |
+| -------------- | ------------------------------------------------------------------------------------------------------- | -------------------------------------- | ----- | ----- | ----- | ----- |
+| YOLOv8s-world   | [yolov8s-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s-world.pt)     | [目标检测](../tasks/detect.md)         | ✅    | ✅    | ✅    | ❌    |
+| YOLOv8s-worldv2 | [yolov8s-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8s-worldv2.pt) | [目标检测](../tasks/detect.md)         | ✅    | ✅    | ✅    | ✅    |
+| YOLOv8m-world   | [yolov8m-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8m-world.pt)     | [目标检测](../tasks/detect.md)         | ✅    | ✅    | ✅    | ❌    |
+| YOLOv8m-worldv2 | [yolov8m-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8m-worldv2.pt) | [目标检测](../tasks/detect.md)         | ✅    | ✅    | ✅    | ✅    |
+| YOLOv8l-world   | [yolov8l-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8l-world.pt)     | [目标检测](../tasks/detect.md)         | ✅    | ✅    | ✅    | ❌    |
+| YOLOv8l-worldv2 | [yolov8l-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8l-worldv2.pt) | [目标检测](../tasks/detect.md)         | ✅    | ✅    | ✅    | ✅    |
+| YOLOv8x-world   | [yolov8x-world.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8x-world.pt)     | [目标检测](../tasks/detect.md)         | ✅    | ✅    | ✅    | ❌    |
+| YOLOv8x-worldv2 | [yolov8x-worldv2.pt](https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8x-worldv2.pt) | [目标检测](../tasks/detect.md)         | ✅    | ✅    | ✅    | ✅    |
 
-### How do I reproduce the official results of YOLO-World from scratch?
+### 如何从头复现YOLO-World的官方结果？
 
-To reproduce the official results from scratch, you need to prepare the datasets and launch the training using the provided code. The training procedure involves creating a data dictionary and running the `train` method with a custom trainer:
+需准备数据集并使用定制训练器启动训练：
 
 ```python
 from ultralytics import YOLOWorld
