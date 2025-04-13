@@ -400,257 +400,257 @@ nav:
               - Neural Magic的DeepSparse: yolov5/tutorials/neural_magic_pruning_quantization.md
               - Comet日志记录: yolov5/tutorials/comet_logging_integration.md
               - Clearml日志记录: yolov5/tutorials/clearml_logging_integration.md
-          - 集成:
-              - integrations/index.md
-              - Amazon SageMaker: integrations/amazon-sagemaker.md
-              - ClearML: integrations/clearml.md
-              - Comet ML: integrations/comet.md
-              - CoreML: integrations/coreml.md
-              - DVC: integrations/dvc.md
-              - Google Colab: integrations/google-colab.md
-              - Gradio: integrations/gradio.md
-              - IBM Watsonx: integrations/ibm-watsonx.md
-              - JupyterLab: integrations/jupyterlab.md
-              - Kaggle: integrations/kaggle.md
-              - MLflow: integrations/mlflow.md
-              - Neural Magic: integrations/neural-magic.md
-              - ONNX: integrations/onnx.md
-              - OpenVINO: integrations/openvino.md
-              - PaddlePaddle: integrations/paddlepaddle.md
-              - MNN: integrations/mnn.md
-              - NCNN: integrations/ncnn.md
-              - Paperspace Gradient: integrations/paperspace.md
-              - Ray Tune: integrations/ray-tune.md
-              - Roboflow: integrations/roboflow.md
-              - TF GraphDef: integrations/tf-graphdef.md
-              - TF SavedModel: integrations/tf-savedmodel.md
-              - TF.js: integrations/tfjs.md
-              - TFLite: integrations/tflite.md
-              - TFLite Edge TPU: integrations/edge-tpu.md
-              - TensorBoard: integrations/tensorboard.md
-              - TensorRT: integrations/tensorrt.md
-              - TorchScript: integrations/torchscript.md
-              - VS Code: integrations/vscode.md
-              - Weights & Biases: integrations/weights-biases.md
-              - Albumentations: integrations/albumentations.md
-              - SONY IMX500: integrations/sony-imx500.md
-              - Rockchip RKNN: integrations/rockchip-rknn.md
-              - Seeed Studio reCamera: integrations/seeedstudio-recamera.md
-          - HUB:
-              - hub/index.md
-              - 网页:
-                  - hub/index.md
-                  - 快速入门: hub/quickstart.md
-                  - 数据集: hub/datasets.md
-                  - 项目: hub/projects.md
-                  - 模型: hub/models.md
-                  - 专业版: hub/pro.md
-                  - 云训练: hub/cloud-training.md
-                  - 推理API: hub/inference-api.md
-                  - 团队: hub/teams.md
-                  - 集成: hub/integrations.md
-              - 应用:
-                  - hub/app/index.md
-                  - iOS: hub/app/ios.md
-                  - Android: hub/app/android.md
-              - Python SDK:
-                  - hub/sdk/index.md
-                  - 快速入门: hub/sdk/quickstart.md
-                  - 模型: hub/sdk/model.md
-                  - 数据集: hub/sdk/dataset.md
-                  - 项目: hub/sdk/project.md
-                  - 参考:
-                      - base:
-                          - api_client: hub/sdk/reference/base/api_client.md
-                          - auth: hub/sdk/reference/base/auth.md
-                          - crud_client: hub/sdk/reference/base/crud_client.md
-                          - paginated_list: hub/sdk/reference/base/paginated_list.md
-                          - server_clients: hub/sdk/reference/base/server_clients.md
-                      - helpers:
-                          - error_handler: hub/sdk/reference/helpers/error_handler.md
-                          - exceptions: hub/sdk/reference/helpers/exceptions.md
-                          - logger: hub/sdk/reference/helpers/logger.md
-                          - utils: hub/sdk/reference/helpers/utils.md
-                      - hub_client: hub/sdk/reference/hub_client.md
-                      - modules:
-                          - datasets: hub/sdk/reference/modules/datasets.md
-                          - models: hub/sdk/reference/modules/models.md
-                          - projects: hub/sdk/reference/modules/projects.md
-                          - teams: hub/sdk/reference/modules/teams.md
-                          - users: hub/sdk/reference/modules/users.md
-              - REST API:
-                  - hub/api/index.md
-
+  - 集成:
+      - integrations/index.md
+      - Amazon SageMaker: integrations/amazon-sagemaker.md
+      - ClearML: integrations/clearml.md
+      - Comet ML: integrations/comet.md
+      - CoreML: integrations/coreml.md
+      - DVC: integrations/dvc.md
+      - Google Colab: integrations/google-colab.md
+      - Gradio: integrations/gradio.md
+      - IBM Watsonx: integrations/ibm-watsonx.md
+      - JupyterLab: integrations/jupyterlab.md
+      - Kaggle: integrations/kaggle.md
+      - MLflow: integrations/mlflow.md
+      - Neural Magic: integrations/neural-magic.md
+      - ONNX: integrations/onnx.md
+      - OpenVINO: integrations/openvino.md
+      - PaddlePaddle: integrations/paddlepaddle.md
+      - MNN: integrations/mnn.md
+      - NCNN: integrations/ncnn.md
+      - Paperspace Gradient: integrations/paperspace.md
+      - Ray Tune: integrations/ray-tune.md
+      - Roboflow: integrations/roboflow.md
+      - TF GraphDef: integrations/tf-graphdef.md
+      - TF SavedModel: integrations/tf-savedmodel.md
+      - TF.js: integrations/tfjs.md
+      - TFLite: integrations/tflite.md
+      - TFLite Edge TPU: integrations/edge-tpu.md
+      - TensorBoard: integrations/tensorboard.md
+      - TensorRT: integrations/tensorrt.md
+      - TorchScript: integrations/torchscript.md
+      - VS Code: integrations/vscode.md
+      - Weights & Biases: integrations/weights-biases.md
+      - Albumentations: integrations/albumentations.md
+      - SONY IMX500: integrations/sony-imx500.md
+      - Rockchip RKNN: integrations/rockchip-rknn.md
+      - Seeed Studio reCamera: integrations/seeedstudio-recamera.md
+  - HUB:
+      - hub/index.md
+      - 网页:
+          - hub/index.md
+          - 快速入门: hub/quickstart.md
+          - 数据集: hub/datasets.md
+          - 项目: hub/projects.md
+          - 模型: hub/models.md
+          - 专业版: hub/pro.md
+          - 云训练: hub/cloud-training.md
+          - 推理API: hub/inference-api.md
+          - 团队: hub/teams.md
+          - 集成: hub/integrations.md
+      - 应用:
+          - hub/app/index.md
+          - iOS: hub/app/ios.md
+          - Android: hub/app/android.md
+      - Python SDK:
+          - hub/sdk/index.md
+          - 快速入门: hub/sdk/quickstart.md
+          - 模型: hub/sdk/model.md
+          - 数据集: hub/sdk/dataset.md
+          - 项目: hub/sdk/project.md
           - 参考:
-              - cfg:
-                  - __init__: reference/cfg/__init__.md
-              - data:
-                  - annotator: reference/data/annotator.md
-                  - augment: reference/data/augment.md
-                  - base: reference/data/base.md
-                  - build: reference/data/build.md
-                  - converter: reference/data/converter.md
-                  - dataset: reference/data/dataset.md
-                  - loaders: reference/data/loaders.md
-                  - split_dota: reference/data/split_dota.md
-                  - utils: reference/data/utils.md
-              - engine:
-                  - exporter: reference/engine/exporter.md
-                  - model: reference/engine/model.md
-                  - predictor: reference/engine/predictor.md
-                  - results: reference/engine/results.md
-                  - trainer: reference/engine/trainer.md
-                  - tuner: reference/engine/tuner.md
-                  - validator: reference/engine/validator.md
-              - hub:
-                  - __init__: reference/hub/__init__.md
-                  - auth: reference/hub/auth.md
-                  - google:
-                      - __init__: reference/hub/google/__init__.md
-                  - session: reference/hub/session.md
-                  - utils: reference/hub/utils.md
-              - models:
-                  - fastsam:
-                      - model: reference/models/fastsam/model.md
-                      - predict: reference/models/fastsam/predict.md
-                      - utils: reference/models/fastsam/utils.md
-                      - val: reference/models/fastsam/val.md
-                  - nas:
-                      - model: reference/models/nas/model.md
-                      - predict: reference/models/nas/predict.md
-                      - val: reference/models/nas/val.md
-                  - rtdetr:
-                      - model: reference/models/rtdetr/model.md
-                      - predict: reference/models/rtdetr/predict.md
-                      - train: reference/models/rtdetr/train.md
-                      - val: reference/models/rtdetr/val.md
-                  - sam:
-                      - amg: reference/models/sam/amg.md
-                      - build: reference/models/sam/build.md
-                      - model: reference/models/sam/model.md
-                      - modules:
-                          - blocks: reference/models/sam/modules/blocks.md
-                          - decoders: reference/models/sam/modules/decoders.md
-                          - encoders: reference/models/sam/modules/encoders.md
-                          - memory_attention: reference/models/sam/modules/memory_attention.md
-                          - sam: reference/models/sam/modules/sam.md
-                          - tiny_encoder: reference/models/sam/modules/tiny_encoder.md
-                          - transformer: reference/models/sam/modules/transformer.md
-                          - utils: reference/models/sam/modules/utils.md
-                      - predict: reference/models/sam/predict.md
-                  - utils:
-                      - loss: reference/models/utils/loss.md
-                      - ops: reference/models/utils/ops.md
-                  - yolo:
-                      - classify:
-                          - predict: reference/models/yolo/classify/predict.md
-                          - train: reference/models/yolo/classify/train.md
-                          - val: reference/models/yolo/classify/val.md
-                      - detect:
-                          - predict: reference/models/yolo/detect/predict.md
-                          - train: reference/models/yolo/detect/train.md
-                          - val: reference/models/yolo/detect/val.md
-                      - model: reference/models/yolo/model.md
-                      - obb:
-                          - predict: reference/models/yolo/obb/predict.md
-                          - train: reference/models/yolo/obb/train.md
-                          - val: reference/models/yolo/obb/val.md
-                      - pose:
-                          - predict: reference/models/yolo/pose/predict.md
-                          - train: reference/models/yolo/pose/train.md
-                          - val: reference/models/yolo/pose/val.md
-                      - segment:
-                          - predict: reference/models/yolo/segment/predict.md
-                          - train: reference/models/yolo/segment/train.md
-                          - val: reference/models/yolo/segment/val.md
-                      - world:
-                          - train: reference/models/yolo/world/train.md
-                          - train_world: reference/models/yolo/world/train_world.md
-                      - yoloe:
-                          - predict: reference/models/yolo/yoloe/predict.md
-                          - train: reference/models/yolo/yoloe/train.md
-                          - train_seg: reference/models/yolo/yoloe/train_seg.md
-                          - val: reference/models/yolo/yoloe/val.md
-              - nn:
-                  - autobackend: reference/nn/autobackend.md
-                  - modules:
-                      - activation: reference/nn/modules/activation.md
-                      - block: reference/nn/modules/block.md
-                      - conv: reference/nn/modules/conv.md
-                      - head: reference/nn/modules/head.md
-                      - transformer: reference/nn/modules/transformer.md
-                      - utils: reference/nn/modules/utils.md
-                  - tasks: reference/nn/tasks.md
-                  - text_model: reference/nn/text_model.md
-              - solutions:
-                  - ai_gym: reference/solutions/ai_gym.md
-                  - analytics: reference/solutions/analytics.md
-                  - distance_calculation: reference/solutions/distance_calculation.md
-                  - heatmap: reference/solutions/heatmap.md
-                  - instance_segmentation: reference/solutions/instance_segmentation.md
-                  - object_blurrer: reference/solutions/object_blurrer.md
-                  - object_counter: reference/solutions/object_counter.md
-                  - object_cropper: reference/solutions/object_cropper.md
-                  - parking_management: reference/solutions/parking_management.md
-                  - queue_management: reference/solutions/queue_management.md
-                  - region_counter: reference/solutions/region_counter.md
-                  - security_alarm: reference/solutions/security_alarm.md
-                  - solutions: reference/solutions/solutions.md
-                  - speed_estimation: reference/solutions/speed_estimation.md
-                  - streamlit_inference: reference/solutions/streamlit_inference.md
-                  - trackzone: reference/solutions/trackzone.md
-                  - vision_eye: reference/solutions/vision_eye.md
-              - trackers:
-                  - basetrack: reference/trackers/basetrack.md
-                  - bot_sort: reference/trackers/bot_sort.md
-                  - byte_tracker: reference/trackers/byte_tracker.md
-                  - track: reference/trackers/track.md
-                  - utils:
-                      - gmc: reference/trackers/utils/gmc.md
-                      - kalman_filter: reference/trackers/utils/kalman_filter.md
-                      - matching: reference/trackers/utils/matching.md
-              - utils:
-                  - __init__: reference/utils/__init__.md
-                  - autobatch: reference/utils/autobatch.md
-                  - benchmarks: reference/utils/benchmarks.md
-                  - callbacks:
-                      - base: reference/utils/callbacks/base.md
-                      - clearml: reference/utils/callbacks/clearml.md
-                      - comet: reference/utils/callbacks/comet.md
-                      - dvc: reference/utils/callbacks/dvc.md
-                      - hub: reference/utils/callbacks/hub.md
-                      - mlflow: reference/utils/callbacks/mlflow.md
-                      - neptune: reference/utils/callbacks/neptune.md
-                      - raytune: reference/utils/callbacks/raytune.md
-                      - tensorboard: reference/utils/callbacks/tensorboard.md
-                      - wb: reference/utils/callbacks/wb.md
-                  - checks: reference/utils/checks.md
-                  - dist: reference/utils/dist.md
-                  - downloads: reference/utils/downloads.md
-                  - errors: reference/utils/errors.md
-                  - files: reference/utils/files.md
-                  - instance: reference/utils/instance.md
-                  - loss: reference/utils/loss.md
-                  - metrics: reference/utils/metrics.md
-                  - ops: reference/utils/ops.md
-                  - patches: reference/utils/patches.md
-                  - plotting: reference/utils/plotting.md
-                  - tal: reference/utils/tal.md
-                  - torch_utils: reference/utils/torch_utils.md
-                  - triton: reference/utils/triton.md
-                  - tuner: reference/utils/tuner.md
+              - base:
+                  - api_client: hub/sdk/reference/base/api_client.md
+                  - auth: hub/sdk/reference/base/auth.md
+                  - crud_client: hub/sdk/reference/base/crud_client.md
+                  - paginated_list: hub/sdk/reference/base/paginated_list.md
+                  - server_clients: hub/sdk/reference/base/server_clients.md
+              - helpers:
+                  - error_handler: hub/sdk/reference/helpers/error_handler.md
+                  - exceptions: hub/sdk/reference/helpers/exceptions.md
+                  - logger: hub/sdk/reference/helpers/logger.md
+                  - utils: hub/sdk/reference/helpers/utils.md
+              - hub_client: hub/sdk/reference/hub_client.md
+              - modules:
+                  - datasets: hub/sdk/reference/modules/datasets.md
+                  - models: hub/sdk/reference/modules/models.md
+                  - projects: hub/sdk/reference/modules/projects.md
+                  - teams: hub/sdk/reference/modules/teams.md
+                  - users: hub/sdk/reference/modules/users.md
+      - REST API:
+          - hub/api/index.md
 
-          - 帮助:
-              - 帮助: help/index.md
-              - 常见问题(FAQ): help/FAQ.md
-              - 贡献指南: help/contributing.md
-              - 持续集成(CI)指南: help/CI.md
-              - 贡献者许可协议(CLA): help/CLA.md
-              - 最小可重现示例(MRE)指南: help/minimum-reproducible-example.md
-              - 行为准则: help/code-of-conduct.md
-              - 环境、健康和安全(EHS)政策: help/environmental-health-safety.md
-              - 安全政策: help/security.md
-              - 隐私政策: help/privacy.md
+  - 参考:
+      - cfg:
+          - __init__: reference/cfg/__init__.md
+      - data:
+          - annotator: reference/data/annotator.md
+          - augment: reference/data/augment.md
+          - base: reference/data/base.md
+          - build: reference/data/build.md
+          - converter: reference/data/converter.md
+          - dataset: reference/data/dataset.md
+          - loaders: reference/data/loaders.md
+          - split_dota: reference/data/split_dota.md
+          - utils: reference/data/utils.md
+      - engine:
+          - exporter: reference/engine/exporter.md
+          - model: reference/engine/model.md
+          - predictor: reference/engine/predictor.md
+          - results: reference/engine/results.md
+          - trainer: reference/engine/trainer.md
+          - tuner: reference/engine/tuner.md
+          - validator: reference/engine/validator.md
+      - hub:
+          - __init__: reference/hub/__init__.md
+          - auth: reference/hub/auth.md
+          - google:
+              - __init__: reference/hub/google/__init__.md
+          - session: reference/hub/session.md
+          - utils: reference/hub/utils.md
+      - models:
+          - fastsam:
+              - model: reference/models/fastsam/model.md
+              - predict: reference/models/fastsam/predict.md
+              - utils: reference/models/fastsam/utils.md
+              - val: reference/models/fastsam/val.md
+          - nas:
+              - model: reference/models/nas/model.md
+              - predict: reference/models/nas/predict.md
+              - val: reference/models/nas/val.md
+          - rtdetr:
+              - model: reference/models/rtdetr/model.md
+              - predict: reference/models/rtdetr/predict.md
+              - train: reference/models/rtdetr/train.md
+              - val: reference/models/rtdetr/val.md
+          - sam:
+              - amg: reference/models/sam/amg.md
+              - build: reference/models/sam/build.md
+              - model: reference/models/sam/model.md
+              - modules:
+                  - blocks: reference/models/sam/modules/blocks.md
+                  - decoders: reference/models/sam/modules/decoders.md
+                  - encoders: reference/models/sam/modules/encoders.md
+                  - memory_attention: reference/models/sam/modules/memory_attention.md
+                  - sam: reference/models/sam/modules/sam.md
+                  - tiny_encoder: reference/models/sam/modules/tiny_encoder.md
+                  - transformer: reference/models/sam/modules/transformer.md
+                  - utils: reference/models/sam/modules/utils.md
+              - predict: reference/models/sam/predict.md
+          - utils:
+              - loss: reference/models/utils/loss.md
+              - ops: reference/models/utils/ops.md
+          - yolo:
+              - classify:
+                  - predict: reference/models/yolo/classify/predict.md
+                  - train: reference/models/yolo/classify/train.md
+                  - val: reference/models/yolo/classify/val.md
+              - detect:
+                  - predict: reference/models/yolo/detect/predict.md
+                  - train: reference/models/yolo/detect/train.md
+                  - val: reference/models/yolo/detect/val.md
+              - model: reference/models/yolo/model.md
+              - obb:
+                  - predict: reference/models/yolo/obb/predict.md
+                  - train: reference/models/yolo/obb/train.md
+                  - val: reference/models/yolo/obb/val.md
+              - pose:
+                  - predict: reference/models/yolo/pose/predict.md
+                  - train: reference/models/yolo/pose/train.md
+                  - val: reference/models/yolo/pose/val.md
+              - segment:
+                  - predict: reference/models/yolo/segment/predict.md
+                  - train: reference/models/yolo/segment/train.md
+                  - val: reference/models/yolo/segment/val.md
+              - world:
+                  - train: reference/models/yolo/world/train.md
+                  - train_world: reference/models/yolo/world/train_world.md
+              - yoloe:
+                  - predict: reference/models/yolo/yoloe/predict.md
+                  - train: reference/models/yolo/yoloe/train.md
+                  - train_seg: reference/models/yolo/yoloe/train_seg.md
+                  - val: reference/models/yolo/yoloe/val.md
+      - nn:
+          - autobackend: reference/nn/autobackend.md
+          - modules:
+              - activation: reference/nn/modules/activation.md
+              - block: reference/nn/modules/block.md
+              - conv: reference/nn/modules/conv.md
+              - head: reference/nn/modules/head.md
+              - transformer: reference/nn/modules/transformer.md
+              - utils: reference/nn/modules/utils.md
+          - tasks: reference/nn/tasks.md
+          - text_model: reference/nn/text_model.md
+      - solutions:
+          - ai_gym: reference/solutions/ai_gym.md
+          - analytics: reference/solutions/analytics.md
+          - distance_calculation: reference/solutions/distance_calculation.md
+          - heatmap: reference/solutions/heatmap.md
+          - instance_segmentation: reference/solutions/instance_segmentation.md
+          - object_blurrer: reference/solutions/object_blurrer.md
+          - object_counter: reference/solutions/object_counter.md
+          - object_cropper: reference/solutions/object_cropper.md
+          - parking_management: reference/solutions/parking_management.md
+          - queue_management: reference/solutions/queue_management.md
+          - region_counter: reference/solutions/region_counter.md
+          - security_alarm: reference/solutions/security_alarm.md
+          - solutions: reference/solutions/solutions.md
+          - speed_estimation: reference/solutions/speed_estimation.md
+          - streamlit_inference: reference/solutions/streamlit_inference.md
+          - trackzone: reference/solutions/trackzone.md
+          - vision_eye: reference/solutions/vision_eye.md
+      - trackers:
+          - basetrack: reference/trackers/basetrack.md
+          - bot_sort: reference/trackers/bot_sort.md
+          - byte_tracker: reference/trackers/byte_tracker.md
+          - track: reference/trackers/track.md
+          - utils:
+              - gmc: reference/trackers/utils/gmc.md
+              - kalman_filter: reference/trackers/utils/kalman_filter.md
+              - matching: reference/trackers/utils/matching.md
+      - utils:
+          - __init__: reference/utils/__init__.md
+          - autobatch: reference/utils/autobatch.md
+          - benchmarks: reference/utils/benchmarks.md
+          - callbacks:
+              - base: reference/utils/callbacks/base.md
+              - clearml: reference/utils/callbacks/clearml.md
+              - comet: reference/utils/callbacks/comet.md
+              - dvc: reference/utils/callbacks/dvc.md
+              - hub: reference/utils/callbacks/hub.md
+              - mlflow: reference/utils/callbacks/mlflow.md
+              - neptune: reference/utils/callbacks/neptune.md
+              - raytune: reference/utils/callbacks/raytune.md
+              - tensorboard: reference/utils/callbacks/tensorboard.md
+              - wb: reference/utils/callbacks/wb.md
+          - checks: reference/utils/checks.md
+          - dist: reference/utils/dist.md
+          - downloads: reference/utils/downloads.md
+          - errors: reference/utils/errors.md
+          - files: reference/utils/files.md
+          - instance: reference/utils/instance.md
+          - loss: reference/utils/loss.md
+          - metrics: reference/utils/metrics.md
+          - ops: reference/utils/ops.md
+          - patches: reference/utils/patches.md
+          - plotting: reference/utils/plotting.md
+          - tal: reference/utils/tal.md
+          - torch_utils: reference/utils/torch_utils.md
+          - triton: reference/utils/triton.md
+          - tuner: reference/utils/tuner.md
+
+  - 帮助:
+      - 帮助: help/index.md
+      - 常见问题(FAQ): help/FAQ.md
+      - 贡献指南: help/contributing.md
+      - 持续集成(CI)指南: help/CI.md
+      - 贡献者许可协议(CLA): help/CLA.md
+      - 最小可重现示例(MRE)指南: help/minimum-reproducible-example.md
+      - 行为准则: help/code-of-conduct.md
+      - 环境、健康和安全(EHS)政策: help/environmental-health-safety.md
+      - 安全政策: help/security.md
+      - 隐私政策: help/privacy.md
 
 # Plugins including 301 redirects navigation ---------------------------------------------------------------------------
 plugins:
